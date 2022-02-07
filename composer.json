@@ -1,0 +1,8 @@
+{
+  "name": "ubc-web-services/ubc_vpr_shared_config",
+  "description": "Custom UBC Drupal 9 config modules for the VPR suite of websites",
+  "type": "drupal-module",
+  "require": {
+    "ubc-web-services/ubc_d8_config_modules": "^5.0@beta"
+  }
+}
