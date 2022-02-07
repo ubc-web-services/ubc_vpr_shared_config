@@ -9,25 +9,163 @@ function ubc_vpr_shared_config_install() {
   $config = \Drupal::service('config.factory');
   // alter preexisting image styles when installing
   $config->getEditable('image.style.hero_focal_point_2600')
-  ->set('effects.d1f781ee-20b1-4f2e-ad88-c3ef3a609877.data.height', '813')
-  ->save();
+    ->set('effects.d1f781ee-20b1-4f2e-ad88-c3ef3a609877.data.height', '813')
+    ->save();
   $config->getEditable('image.style.hero_focal_point_1300')
-  ->set('effects.3bd36d37-80c9-47bb-a4fe-863e3a1811bd.data.height', '406')
-  ->save();
+    ->set('effects.3bd36d37-80c9-47bb-a4fe-863e3a1811bd.data.height', '406')
+    ->save();
   $config->getEditable('image.style.hero_focal_point_970')
-  ->set('effects.e66684e1-b274-464f-a1d9-a9aea42d1f2d.data.height', '303')
-  ->save();
+    ->set('effects.e66684e1-b274-464f-a1d9-a9aea42d1f2d.data.height', '303')
+    ->save();
   $config->getEditable('image.style.hero_focal_point_650')
-  ->set('effects.43c9f282-4fd9-4324-b7fd-8a4f48a42f14.data.height', '203')
-  ->save();
+    ->set('effects.43c9f282-4fd9-4324-b7fd-8a4f48a42f14.data.height', '203')
+    ->save();
   $config->getEditable('image.style.hero_focal_point_325')
-  ->set('effects.205c78b7-fd87-4be5-a494-908dd2205e7f.data.height', '102')
-  ->save();
+    ->set('effects.205c78b7-fd87-4be5-a494-908dd2205e7f.data.height', '102')
+    ->save();
   $config->getEditable('views.view.content_announcements_latest')
-  ->set('display.default.display_options.css_class', 'px-8 pt-2 pb-6 mt-8 border border-ubc-blue-sea')
-  ->set('display.default.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
-  ->set('display.block_2.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
-  ->save();
+    ->set('display.default.display_options.css_class', 'px-8 pt-2 pb-6 mt-8 border border-ubc-blue-sea')
+    ->set('display.default.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
+    ->set('display.block_2.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
+    ->save();
+  $config->getEditable('user.role.content_creator')
+    ->set('dependencies.config', [
+      'filter.format.filtered_text',
+      'media.type.file',
+      'media.type.image',
+      'media.type.private_file',
+      'media.type.remote_video',
+      'media.type.svg_icon',
+      'media.type.video',
+      'node.type.ubc_announcement',
+      'node.type.ubc_event',
+      'node.type.ubc_page',
+      'node.type.ubc_profile',
+      'taxonomy.vocabulary.event_category',
+    ])
+    ->set('dependencies.module', [
+      'dropzonejs',
+      'file',
+      'filter',
+      'media',
+      'media_bulk_upload',
+      'node',
+      'scheduler',
+      'system',
+      'taxonomy',
+      'toolbar',
+      'tour',
+      'ubc_content_items',
+      'webform',
+    ])
+    ->set('permissions', [
+      'access taxonomy overview',
+      'view unpublished content item entities',
+    ])
+    ->save();
+  $config->getEditable('user.role.editor')
+    ->set('dependencies.config', [
+      'filter.format.filtered_text',
+      'media.type.file',
+      'media.type.image',
+      'media.type.private_file',
+      'media.type.remote_video',
+      'media.type.svg_icon',
+      'media.type.video',
+      'node.type.homepage',
+      'node.type.ubc_announcement',
+      'node.type.ubc_event',
+      'node.type.ubc_landing_page',
+      'node.type.ubc_page',
+      'node.type.ubc_profile',
+      'node.type.webform',
+      'taxonomy.vocabulary.announcement_type',
+      'taxonomy.vocabulary.department_or_unit',
+      'taxonomy.vocabulary.event_category',
+      'taxonomy.vocabulary.profile_affiliated_institution',
+      'taxonomy.vocabulary.profile_category',
+      'taxonomy.vocabulary.profile_faculty',
+      'taxonomy.vocabulary.profile_role',
+      'taxonomy.vocabulary.research_theme',
+      'taxonomy.vocabulary.tags',
+    ])
+    ->set('dependencies.module', [
+      'block',
+      'contextual',
+      'dropzonejs',
+      'file',
+      'file_delete',
+      'filter',
+      'google_analytics',
+      'media',
+      'media_bulk_upload',
+      'metatag',
+      'node',
+      'paragraphs',
+      'path',
+      'redirect',
+      'role_delegation',
+      'scheduler',
+      'system',
+      'taxonomy',
+      'toolbar',
+      'tour',
+      'ubc_content_items',
+      'webform',
+      'webform_node',
+    ])
+    ->set('permissions', [
+      'access webform help',
+      'access webform overview',
+      'access webform submission user',
+      'add content item entities',
+      'administer taxonomy',
+      'administer webform',
+      'administer webform submission',
+      'create terms in announcement_type',
+      'create terms in profile_affiliated_institution',
+      'create terms in profile_category',
+      'create terms in profile_faculty',
+      'create terms in profile_role',
+      'create terms in research_theme',
+      'create webform content',
+      'delete all content item revisions',
+      'delete any webform content',
+      'delete content item entities',
+      'delete own webform content',
+      'delete terms in announcement_type',
+      'delete terms in profile_affiliated_institution',
+      'delete terms in profile_category',
+      'delete terms in profile_faculty',
+      'delete terms in profile_role',
+      'delete terms in research_theme',
+      'delete webform revisions',
+      'delete webform submissions any node',
+      'delete webform submissions own node',
+      'edit any ubc_landing_page content',
+      'edit content item entities',
+      'edit own webform content',
+      'edit own webform submission',
+      'edit terms in announcement_type',
+      'edit terms in profile_affiliated_institution',
+      'edit terms in profile_category',
+      'edit terms in profile_faculty',
+      'edit terms in profile_role',
+      'edit terms in research_theme',
+      'edit webform submissions any node',
+      'edit webform submissions own node',
+      'revert all content item revisions',
+      'revert ubc_landing_page revisions',
+      'revert webform revisions',
+      'view all content item revisions',
+      'view ubc_profile revisions',
+      'view unpublished content item entities',
+      'view unpublished paragraphs',
+      'view webform revisions',
+      'view webform submissions any node',
+      'view webform submissions own node',
+    ])
+    ->save();
 }
 
 /**
@@ -82,20 +220,20 @@ function ubc_vpr_shared_config_update_9001() {
     ->save();
     // reset the already present image styles
     $config->getEditable('image.style.hero_focal_point_2600')
-    ->set('effects.d1f781ee-20b1-4f2e-ad88-c3ef3a609877.data.height', '813')
-    ->save();
+      ->set('effects.d1f781ee-20b1-4f2e-ad88-c3ef3a609877.data.height', '813')
+      ->save();
     $config->getEditable('image.style.hero_focal_point_1300')
-    ->set('effects.3bd36d37-80c9-47bb-a4fe-863e3a1811bd.data.height', '406')
-    ->save();
+      ->set('effects.3bd36d37-80c9-47bb-a4fe-863e3a1811bd.data.height', '406')
+      ->save();
     $config->getEditable('image.style.hero_focal_point_970')
-    ->set('effects.e66684e1-b274-464f-a1d9-a9aea42d1f2d.data.height', '303')
-    ->save();
+      ->set('effects.e66684e1-b274-464f-a1d9-a9aea42d1f2d.data.height', '303')
+      ->save();
     $config->getEditable('image.style.hero_focal_point_650')
-    ->set('effects.43c9f282-4fd9-4324-b7fd-8a4f48a42f14.data.height', '203')
-    ->save();
+      ->set('effects.43c9f282-4fd9-4324-b7fd-8a4f48a42f14.data.height', '203')
+      ->save();
     $config->getEditable('image.style.hero_focal_point_325')
-    ->set('effects.205c78b7-fd87-4be5-a494-908dd2205e7f.data.height', '102')
-    ->save();
+      ->set('effects.205c78b7-fd87-4be5-a494-908dd2205e7f.data.height', '102')
+      ->save();
 }
 
 /**
@@ -107,5 +245,150 @@ function ubc_vpr_shared_config_update_9002() {
     ->set('display.default.display_options.css_class', 'px-8 pt-2 pb-6 mt-8 border border-ubc-blue-sea')
     ->set('display.default.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
     ->set('display.block_2.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
+    ->save();
+}
+
+  /**
+ * Update preinstalled roles from ubc_shared_config.
+ */
+function ubc_vpr_shared_config_update_9003() {
+  $config = \Drupal::service('config.factory');
+  $config->getEditable('user.role.content_creator')
+    ->set('dependencies.config', [
+      'filter.format.filtered_text',
+      'media.type.file',
+      'media.type.image',
+      'media.type.private_file',
+      'media.type.remote_video',
+      'media.type.svg_icon',
+      'media.type.video',
+      'node.type.ubc_announcement',
+      'node.type.ubc_event',
+      'node.type.ubc_page',
+      'node.type.ubc_profile',
+      'taxonomy.vocabulary.event_category',
+    ])
+    ->set('dependencies.module', [
+      'dropzonejs',
+      'file',
+      'filter',
+      'media',
+      'media_bulk_upload',
+      'node',
+      'scheduler',
+      'system',
+      'taxonomy',
+      'toolbar',
+      'tour',
+      'ubc_content_items',
+      'webform',
+    ])
+    ->set('permissions', [
+      'access taxonomy overview',
+      'view unpublished content item entities',
+    ])
+    ->save();
+  $config->getEditable('user.role.editor')
+    ->set('dependencies.config', [
+      'filter.format.filtered_text',
+      'media.type.file',
+      'media.type.image',
+      'media.type.private_file',
+      'media.type.remote_video',
+      'media.type.svg_icon',
+      'media.type.video',
+      'node.type.homepage',
+      'node.type.ubc_announcement',
+      'node.type.ubc_event',
+      'node.type.ubc_landing_page',
+      'node.type.ubc_page',
+      'node.type.ubc_profile',
+      'node.type.webform',
+      'taxonomy.vocabulary.announcement_type',
+      'taxonomy.vocabulary.department_or_unit',
+      'taxonomy.vocabulary.event_category',
+      'taxonomy.vocabulary.profile_affiliated_institution',
+      'taxonomy.vocabulary.profile_category',
+      'taxonomy.vocabulary.profile_faculty',
+      'taxonomy.vocabulary.profile_role',
+      'taxonomy.vocabulary.research_theme',
+      'taxonomy.vocabulary.tags',
+    ])
+    ->set('dependencies.module', [
+      'block',
+      'contextual',
+      'dropzonejs',
+      'file',
+      'file_delete',
+      'filter',
+      'google_analytics',
+      'media',
+      'media_bulk_upload',
+      'metatag',
+      'node',
+      'paragraphs',
+      'path',
+      'redirect',
+      'role_delegation',
+      'scheduler',
+      'system',
+      'taxonomy',
+      'toolbar',
+      'tour',
+      'ubc_content_items',
+      'webform',
+      'webform_node',
+    ])
+    ->set('permissions', [
+      'access webform help',
+      'access webform overview',
+      'access webform submission user',
+      'add content item entities',
+      'administer taxonomy',
+      'administer webform',
+      'administer webform submission',
+      'create terms in announcement_type',
+      'create terms in profile_affiliated_institution',
+      'create terms in profile_category',
+      'create terms in profile_faculty',
+      'create terms in profile_role',
+      'create terms in research_theme',
+      'create webform content',
+      'delete all content item revisions',
+      'delete any webform content',
+      'delete content item entities',
+      'delete own webform content',
+      'delete terms in announcement_type',
+      'delete terms in profile_affiliated_institution',
+      'delete terms in profile_category',
+      'delete terms in profile_faculty',
+      'delete terms in profile_role',
+      'delete terms in research_theme',
+      'delete webform revisions',
+      'delete webform submissions any node',
+      'delete webform submissions own node',
+      'edit any ubc_landing_page content',
+      'edit content item entities',
+      'edit own webform content',
+      'edit own webform submission',
+      'edit terms in announcement_type',
+      'edit terms in profile_affiliated_institution',
+      'edit terms in profile_category',
+      'edit terms in profile_faculty',
+      'edit terms in profile_role',
+      'edit terms in research_theme',
+      'edit webform submissions any node',
+      'edit webform submissions own node',
+      'revert all content item revisions',
+      'revert ubc_landing_page revisions',
+      'revert webform revisions',
+      'view all content item revisions',
+      'view ubc_profile revisions',
+      'view unpublished content item entities',
+      'view unpublished paragraphs',
+      'view webform revisions',
+      'view webform submissions any node',
+      'view webform submissions own node',
+    ])
     ->save();
 }
