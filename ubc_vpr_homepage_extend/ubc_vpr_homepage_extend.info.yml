@@ -1,0 +1,9 @@
+name: UBC VPR Homepage Content Type - Extra Fields
+type: module
+description: This module extends the custom UBC Homepage content type and its fields.
+package: UBC Web Services
+dependencies:
+  - ubc_homepage:ubc_homepage
+  - ubc_vpr_shared_config:ubc_vpr_shared_config
+core: '8.x'
+core_version_requirement: ^8 || ^9

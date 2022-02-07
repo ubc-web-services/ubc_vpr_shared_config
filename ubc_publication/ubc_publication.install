@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_install().
+ *
+ * @ingroup ubc_publication
+ */
+function ubc_publication_install() {
+
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * @ingroup ubc_publication
+ */
+function ubc_publication_uninstall() {
+}
+
+ /**
+ * Update 9001 - sample update.
+ */
+ /*
+function ubc_publication_update_9001() {
+}
+*/

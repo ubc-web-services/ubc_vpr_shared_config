@@ -1,0 +1,111 @@
+<?php
+
+/**
+ * Implements hook_install().
+ *
+ * @ingroup ubc_vpr_shared_config
+ */
+function ubc_vpr_shared_config_install() {
+  $config = \Drupal::service('config.factory');
+  // alter preexisting image styles when installing
+  $config->getEditable('image.style.hero_focal_point_2600')
+  ->set('effects.d1f781ee-20b1-4f2e-ad88-c3ef3a609877.data.height', '813')
+  ->save();
+  $config->getEditable('image.style.hero_focal_point_1300')
+  ->set('effects.3bd36d37-80c9-47bb-a4fe-863e3a1811bd.data.height', '406')
+  ->save();
+  $config->getEditable('image.style.hero_focal_point_970')
+  ->set('effects.e66684e1-b274-464f-a1d9-a9aea42d1f2d.data.height', '303')
+  ->save();
+  $config->getEditable('image.style.hero_focal_point_650')
+  ->set('effects.43c9f282-4fd9-4324-b7fd-8a4f48a42f14.data.height', '203')
+  ->save();
+  $config->getEditable('image.style.hero_focal_point_325')
+  ->set('effects.205c78b7-fd87-4be5-a494-908dd2205e7f.data.height', '102')
+  ->save();
+  $config->getEditable('views.view.content_announcements_latest')
+  ->set('display.default.display_options.css_class', 'px-8 pt-2 pb-6 mt-8 border border-ubc-blue-sea')
+  ->set('display.default.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
+  ->set('display.block_2.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
+  ->save();
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * @ingroup ubc_vpr_shared_config
+ */
+function ubc_vpr_shared_config_uninstall() {
+}
+
+/**
+ * Update to add additional 1920 hero image style and adjust hero image
+ * styles already set.
+ */
+function ubc_vpr_shared_config_update_9001() {
+  // create the new configuration (will also be enabled upon install)
+  \Drupal::config('image.style.hero_focal_point_1920');
+  // now write to the new configuration
+  $config = \Drupal::service('config.factory');
+  $config->getEditable('image.style.hero_focal_point_1920')
+    ->setData([
+      'langcode' => 'en',
+      'status' => 'true',
+      'dependencies' => [
+        'module'  => [
+          'focal_point' => TRUE,
+        ],
+      ],
+      'name' => 'hero_focal_point_1920',
+      'label' => 'Hero, focal point, 1920',
+      'effects' => [
+        '1e3de93a-07b2-49fa-942d-deb31c8d42ab'  => [
+          'uuid' => '1e3de93a-07b2-49fa-942d-deb31c8d42ab',
+          'id' => 'focal_point_scale_and_crop',
+          'weight' => '1',
+          'data'  => [
+            'width' => '1920',
+            'height' => '600',
+            'crop_type' => 'focal_point',
+          ],
+        ],
+        'adfe84a8-9d1f-4768-8ad5-579accbef52a'  => [
+          'uuid' => 'adfe84a8-9d1f-4768-8ad5-579accbef52a',
+          'id' => 'image_convert',
+          'weight' => '2',
+          'data'  => [
+            'extension' => 'webp',
+          ],
+        ],
+      ],
+    ])
+    ->save();
+    // reset the already present image styles
+    $config->getEditable('image.style.hero_focal_point_2600')
+    ->set('effects.d1f781ee-20b1-4f2e-ad88-c3ef3a609877.data.height', '813')
+    ->save();
+    $config->getEditable('image.style.hero_focal_point_1300')
+    ->set('effects.3bd36d37-80c9-47bb-a4fe-863e3a1811bd.data.height', '406')
+    ->save();
+    $config->getEditable('image.style.hero_focal_point_970')
+    ->set('effects.e66684e1-b274-464f-a1d9-a9aea42d1f2d.data.height', '303')
+    ->save();
+    $config->getEditable('image.style.hero_focal_point_650')
+    ->set('effects.43c9f282-4fd9-4324-b7fd-8a4f48a42f14.data.height', '203')
+    ->save();
+    $config->getEditable('image.style.hero_focal_point_325')
+    ->set('effects.205c78b7-fd87-4be5-a494-908dd2205e7f.data.height', '102')
+    ->save();
+}
+
+/**
+ * Update Announcement Latest view.
+ */
+function ubc_vpr_shared_config_update_9002() {
+  $config = \Drupal::service('config.factory');
+  $config->getEditable('views.view.content_announcements_latest')
+    ->set('display.default.display_options.css_class', 'px-8 pt-2 pb-6 mt-8 border border-ubc-blue-sea')
+    ->set('display.default.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
+    ->set('display.block_2.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
+    ->save();
+}

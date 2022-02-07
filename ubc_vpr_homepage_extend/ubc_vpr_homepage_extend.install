@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * Implements hook_install().
+ *
+ * @ingroup ubc_vpr_homepage_extend
+ */
+function ubc_vpr_homepage_extend_install() {
+  // set the fields that need to be hidden on the default display
+  $config = \Drupal::service('config.factory');
+  $config->getEditable('core.entity_view_display.node.homepage.default')
+    ->set('hidden', [
+      'field_homepage_cards' => true,
+  ])
+  ->save();
+  // set up the new fields on the form display
+  $config->getEditable('core.entity_form_display.node.homepage.default')
+    ->clear(
+      'hidden.field_homepage_cards',
+    )
+    ->set('dependencies.config', [
+      'field.field.node.homepage.field_homepage_cards',
+    ])
+    ->set('content.field_homepage_cards', [
+      'type' => 'entity_reference_paragraphs',
+      'weight' => '2',
+      'region' => 'content',
+      'settings' => [
+        'title' => 'Paragraph',
+        'title_plural' => 'Paragraphs',
+        'edit_mode' => 'closed',
+        'add_mode' => 'button',
+        'form_display_mode' => 'default',
+        'default_paragraph_type' => 'none',
+      ],
+      'third_party_settings' => [],
+    ])
+    ->save();
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * @ingroup ubc_vpr_homepage_extend
+ */
+function ubc_vpr_homepage_extend_uninstall() {
+}
+
+ /**
+ * Update 9001 - sample update.
+ */
+ /*
+function ubc_vpr_homepage_extend_update_9001() {
+}
+*/

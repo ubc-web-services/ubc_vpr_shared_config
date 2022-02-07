@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_install().
+ *
+ * @ingroup ubc_research_project
+ */
+function ubc_research_project_install() {
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * @ingroup ubc_research_project
+ */
+function ubc_research_project_uninstall() {
+}
+
+ /**
+ * Update 9001 - sample update.
+ */
+ /*
+function ubc_research_project_update_9001() {
+}
+*/

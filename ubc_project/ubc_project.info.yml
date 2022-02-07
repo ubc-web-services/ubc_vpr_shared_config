@@ -1,0 +1,9 @@
+name: UBC Project Content Type
+type: module
+description: This module defines a UBC Project content type and its fields.
+package: UBC Web Services
+dependencies:
+  - ubc_profile:ubc_profile
+  - ubc_vpr_shared_config:ubc_vpr_shared_config
+core: '8.x'
+core_version_requirement: ^8 || ^9

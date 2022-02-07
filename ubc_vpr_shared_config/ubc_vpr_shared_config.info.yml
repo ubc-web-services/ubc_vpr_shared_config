@@ -1,0 +1,8 @@
+name: UBC VPR Shared Config
+type: module
+description: This module adds general shared config for the VPR suite of sites.
+package: UBC Web Services
+dependencies:
+  - ubc_general_shared_config:ubc_general_shared_config
+core: '8.x'
+core_version_requirement: ^8 || ^9

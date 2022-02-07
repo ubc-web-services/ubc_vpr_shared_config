@@ -1,0 +1,9 @@
+name: UBC VPR Webform Content Type - Extra Fields
+type: module
+description: This module extends the Webform content type and its fields.
+package: UBC Web Services
+dependencies:
+  - drupal:webform_node
+  - ubc_vpr_shared_config:ubc_vpr_shared_config
+core: '8.x'
+core_version_requirement: ^8 || ^9
