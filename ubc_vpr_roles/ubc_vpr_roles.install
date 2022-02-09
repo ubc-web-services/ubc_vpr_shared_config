@@ -3,9 +3,9 @@
 /**
  * Implements hook_install().
  *
- * @ingroup ubc_vpr_shared_config
+ * @ingroup ubc_vpr_roles
  */
-function ubc_vpr_shared_config_install() {
+function ubc_vpr_roles_install() {
   $config = \Drupal::service('config.factory');
   $config->getEditable('user.role.content_creator')
     ->set('dependencies.config', [
@@ -150,16 +150,16 @@ function ubc_vpr_shared_config_install() {
 /**
  * Implements hook_uninstall().
  *
- * @ingroup ubc_vpr_shared_config
+ * @ingroup ubc_vpr_roles
  */
-function ubc_vpr_shared_config_uninstall() {
+function ubc_vpr_roles_uninstall() {
 }
 
 /**
  * sample update.
  */
 /*
-function ubc_vpr_shared_config_update_9001() {
+function ubc_vpr_roles_update_9001() {
 }
 */
 
