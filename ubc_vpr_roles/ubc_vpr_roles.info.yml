@@ -1,0 +1,15 @@
+name: UBC VPR Roles
+type: module
+description: This module manages user roles for VPR suite of sites.
+package: UBC Web Services
+dependencies:
+  - ubc_vpr_homepage_extend:ubc_vpr_homepage_extend
+  - ubc_vpr_announcement_extend:ubc_vpr_announcement_extend
+  - ubc_vpr_event_extend:ubc_vpr_event_extend
+  - ubc_vpr_landing_page_extend:ubc_vpr_landing_page_extend
+  - ubc_vpr_page_extend:ubc_vpr_page_extend
+  - ubc_vpr_profile_extend:ubc_vpr_profile_extend
+  - ubc_vpr_webform_extend:ubc_vpr_webform_extend
+  - ubc_vpr_shared_config:ubc_vpr_shared_config
+core: '8.x'
+core_version_requirement: ^8 || ^9
