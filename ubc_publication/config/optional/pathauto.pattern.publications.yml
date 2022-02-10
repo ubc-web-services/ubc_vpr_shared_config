@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: mjWLd8OuVEzWwBtBkaQo9QPQcsZb3BM6ghEKDWnuQkc
 id: publications
 label: Publications
 type: 'canonical_entities:node'

@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: X78XMPJObyqktbpUxdzjUe65_UcGYlcfI-grrVViwaA
 id: node.sidebar_content
 label: 'Sidebar Content'
 targetEntityType: node

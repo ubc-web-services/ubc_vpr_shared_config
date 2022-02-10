@@ -5,6 +5,8 @@ dependencies:
     - field.storage.node.field_publication_projects
     - node.type.ubc_publication
     - node.type.ubc_research_project
+_core:
+  default_config_hash: _WgOtRK42pKwtkzuFb2j0XyNgp7dVQtJ5yfhLzdCaTw
 id: node.ubc_publication.field_publication_projects
 field_name: field_publication_projects
 entity_type: node

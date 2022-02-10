@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: 3A3UI0lrHVPTWpAgu1t9yVoA6jsW15_JmjCH_KxHeWo
 id: node.field_r_project_researchers
 field_name: field_r_project_researchers
 entity_type: node

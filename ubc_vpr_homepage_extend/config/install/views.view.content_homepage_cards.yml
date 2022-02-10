@@ -8,6 +8,8 @@ dependencies:
     - node
     - paragraphs
     - user
+_core:
+  default_config_hash: Jq1nE6nfXvbX4AyAL9I4VP28ei72KUdKWYAPW3pg_W8
 id: content_homepage_cards
 label: 'Content: Homepage Cards'
 module: views

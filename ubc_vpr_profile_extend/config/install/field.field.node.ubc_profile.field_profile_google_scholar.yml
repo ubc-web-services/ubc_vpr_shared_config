@@ -6,6 +6,8 @@ dependencies:
     - node.type.ubc_profile
   module:
     - link
+_core:
+  default_config_hash: LrWdo4BTxL5PQyjB6eRsE1iUmYO8yY7oETWQqimOibc
 id: node.ubc_profile.field_profile_google_scholar
 field_name: field_profile_google_scholar
 entity_type: node

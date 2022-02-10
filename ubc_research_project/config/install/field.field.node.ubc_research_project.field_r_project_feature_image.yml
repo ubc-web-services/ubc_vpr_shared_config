@@ -6,6 +6,8 @@ dependencies:
     - node.type.ubc_research_project
   module:
     - image
+_core:
+  default_config_hash: EjgNIzvtlYP30CjmPMbqHxoGUaS6YWtHZ2ih_QcUqtA
 id: node.ubc_research_project.field_r_project_feature_image
 field_name: field_r_project_feature_image
 entity_type: node

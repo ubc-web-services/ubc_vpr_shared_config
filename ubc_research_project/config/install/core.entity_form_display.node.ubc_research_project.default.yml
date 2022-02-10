@@ -35,6 +35,8 @@ third_party_settings:
         description: ''
         required_fields: true
         weight: -100
+_core:
+  default_config_hash: phtkUtz6g4mcncAMw48bo38wf_gEwfSrYjArxOwCEho
 id: node.ubc_research_project.default
 targetEntityType: node
 bundle: ubc_research_project

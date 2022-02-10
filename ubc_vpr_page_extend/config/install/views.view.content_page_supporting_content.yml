@@ -7,6 +7,8 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: AtKZXLG7TyAlGQx9vTiwale17kmfONuxDAFh79ckLIE
 id: content_page_supporting_content
 label: 'Content: Page Supporting Content'
 module: views

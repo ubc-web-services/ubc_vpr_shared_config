@@ -17,6 +17,8 @@ dependencies:
     - taxonomy
     - telephone
     - user
+_core:
+  default_config_hash: LJFkPtbcl1bZwckmqJ1p4gdIo1Zoy_p8eTDZDniVdis
 id: content_vpr_profile_list
 label: 'Content: VPR Profile List'
 module: views

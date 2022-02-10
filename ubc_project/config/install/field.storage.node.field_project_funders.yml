@@ -4,6 +4,8 @@ dependencies:
   module:
     - link
     - node
+_core:
+  default_config_hash: TuBAJTKas84B6iuz-61njRqjK2ZC36mH4tM0vj3TqQM
 id: node.field_project_funders
 field_name: field_project_funders
 entity_type: node

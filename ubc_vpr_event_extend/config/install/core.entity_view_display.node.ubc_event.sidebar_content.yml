@@ -21,6 +21,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: W05POz16JefLMqnRg3gYuuSDdXbr-c5wcQlJ9EG8W-Q
 id: node.ubc_event.sidebar_content
 targetEntityType: node
 bundle: ubc_event

@@ -13,6 +13,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: XJ2fnzebjYpnzptQqj_XzCekZUQ_C3XLYvDjkk2BnJI
 id: node.ubc_partner_organization.teaser
 targetEntityType: node
 bundle: ubc_partner_organization

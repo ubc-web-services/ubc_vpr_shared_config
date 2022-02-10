@@ -4,6 +4,8 @@ dependencies:
   module:
     - node
     - taxonomy
+_core:
+  default_config_hash: vPpZJa7vnR5Pnn4vQWQaWyzFOzOx_OzbOUfyY1eoY_Y
 id: node.field_partner_location
 field_name: field_partner_location
 entity_type: node

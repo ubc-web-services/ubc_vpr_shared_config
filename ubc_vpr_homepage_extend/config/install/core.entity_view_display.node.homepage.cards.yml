@@ -14,6 +14,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - user
+_core:
+  default_config_hash: dPu3dR39J3xlohb4uLT7Sh3tcushQ1adXdge72RzR8s
 id: node.homepage.cards
 targetEntityType: node
 bundle: homepage

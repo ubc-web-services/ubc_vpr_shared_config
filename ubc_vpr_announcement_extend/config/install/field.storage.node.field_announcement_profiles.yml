@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: J-ykIhYe_SFr22xXp104p5lme3k1M1XICn4mN_HamsI
 id: node.field_announcement_profiles
 field_name: field_announcement_profiles
 entity_type: node

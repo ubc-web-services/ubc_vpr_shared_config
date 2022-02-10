@@ -14,6 +14,8 @@ dependencies:
   module:
     - responsive_image
     - user
+_core:
+  default_config_hash: '-Z7-2ddpxBltwmmxIM-R9UfghaPS88aHYt1CsqD5QV8'
 id: node.ubc_partner_organization.featured_content
 targetEntityType: node
 bundle: ubc_partner_organization

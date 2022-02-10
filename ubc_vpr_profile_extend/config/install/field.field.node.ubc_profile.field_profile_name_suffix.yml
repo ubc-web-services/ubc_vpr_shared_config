@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.node.field_profile_name_suffix
     - node.type.ubc_profile
+_core:
+  default_config_hash: PTWEsgK46O_CkfHvTbre3X10eFNfwS5Z3UaOA6DeYDw
 id: node.ubc_profile.field_profile_name_suffix
 field_name: field_profile_name_suffix
 entity_type: node

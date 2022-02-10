@@ -4,6 +4,8 @@ dependencies:
   module:
     - link
     - node
+_core:
+  default_config_hash: Fg_o4tZgt7pNUNomytAXm2BL0AdUpf0zgvUZA3wzx9E
 id: node.field_publication_link
 field_name: field_publication_link
 entity_type: node

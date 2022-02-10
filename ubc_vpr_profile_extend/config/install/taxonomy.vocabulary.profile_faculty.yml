@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: C-fjo-sqiWikBS2oWIloAZo4TKKNOVZIHIQ590LEsa4
 name: 'Profile Faculty'
 vid: profile_faculty
 description: 'Associates the profile with a faculty'

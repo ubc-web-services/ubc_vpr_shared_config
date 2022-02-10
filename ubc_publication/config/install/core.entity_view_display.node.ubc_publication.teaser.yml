@@ -15,6 +15,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: C5aoYdT1baAwhpNlzRayfaR0__AxHyf94Wn5NytvOE4
 id: node.ubc_publication.teaser
 targetEntityType: node
 bundle: ubc_publication

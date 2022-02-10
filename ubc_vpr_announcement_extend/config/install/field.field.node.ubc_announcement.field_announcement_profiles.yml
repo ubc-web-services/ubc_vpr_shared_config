@@ -5,6 +5,8 @@ dependencies:
     - field.storage.node.field_announcement_profiles
     - node.type.ubc_announcement
     - node.type.ubc_profile
+_core:
+  default_config_hash: 473YoMaKdsrh9ONvGDXHsgKR3WxmcT0du-o3EzI9dIg
 id: node.ubc_announcement.field_announcement_profiles
 field_name: field_announcement_profiles
 entity_type: node

@@ -4,6 +4,8 @@ dependencies:
   module:
     - datetime
     - node
+_core:
+  default_config_hash: Qz2WXMfDN55ujN1TWAVfLoGLT5ZASybTpQq2AOwwNhc
 id: node.field_publication_year
 field_name: field_publication_year
 entity_type: node

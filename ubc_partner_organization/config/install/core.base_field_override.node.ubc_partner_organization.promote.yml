@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - node.type.ubc_partner_organization
+_core:
+  default_config_hash: Wx73Eh3oZ6vpxxdrb2DzZFTIBh9RS7UZODqMVbpLL50
 id: node.ubc_partner_organization.promote
 field_name: promote
 entity_type: node

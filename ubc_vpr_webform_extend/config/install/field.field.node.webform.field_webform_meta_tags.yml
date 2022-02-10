@@ -6,6 +6,8 @@ dependencies:
     - node.type.webform
   module:
     - metatag
+_core:
+  default_config_hash: TK24BV-J-otHvyctjRHtgiEYB-AHYOV-PKNVS9kZ9qU
 id: node.webform.field_webform_meta_tags
 field_name: field_webform_meta_tags
 entity_type: node

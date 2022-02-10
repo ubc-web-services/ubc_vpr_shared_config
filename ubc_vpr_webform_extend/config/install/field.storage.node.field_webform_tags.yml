@@ -4,6 +4,8 @@ dependencies:
   module:
     - node
     - taxonomy
+_core:
+  default_config_hash: iQHdIyCWsARMsawiCftw2x0soZlVRUNXsku6D6cdR_0
 id: node.field_webform_tags
 field_name: field_webform_tags
 entity_type: node

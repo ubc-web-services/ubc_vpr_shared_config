@@ -8,6 +8,8 @@ dependencies:
     - allowed_formats
     - text
     - text_summary_options
+_core:
+  default_config_hash: CykI8AY2voHwzCMp2nUTKrDge0DHoY3NP6bRpQ6yMvM
 third_party_settings:
   allowed_formats:
     filtered_text: filtered_text

@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: CM8idYh46NN4s_x2vHEBhE1I_kB8eaif2itioFQBke8
 id: node.field_announcement_image_teaser
 field_name: field_announcement_image_teaser
 entity_type: node

@@ -4,6 +4,8 @@ dependencies:
   module:
     - node
     - taxonomy
+_core:
+  default_config_hash: XARzmK5Bf_RT1cc2G-hdvtTn1O9ZJwhZtrDERyvks2I
 id: node.field_announcement_theme
 field_name: field_announcement_theme
 entity_type: node

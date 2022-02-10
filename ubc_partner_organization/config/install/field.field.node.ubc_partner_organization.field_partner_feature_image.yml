@@ -6,6 +6,8 @@ dependencies:
     - node.type.ubc_partner_organization
   module:
     - image
+_core:
+  default_config_hash: s9FqZQ0ISQs35wIW4Wgf7-M0abwjhVnFUD8etmO3D0w
 id: node.ubc_partner_organization.field_partner_feature_image
 field_name: field_partner_feature_image
 entity_type: node

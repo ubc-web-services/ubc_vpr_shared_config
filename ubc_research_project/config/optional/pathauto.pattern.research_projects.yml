@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: mCDA3QNOy_8Vld1GNH_NrkeUClpE-EzIdt7bN7eRD80
 id: research_projects
 label: 'Research Projects'
 type: 'canonical_entities:node'

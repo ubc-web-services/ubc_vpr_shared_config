@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: P7puPYAbjOQObgyYu1jqujfxTHE-zhvjuD9ur423eaw
 id: node.field_publication_lead
 field_name: field_publication_lead
 entity_type: node

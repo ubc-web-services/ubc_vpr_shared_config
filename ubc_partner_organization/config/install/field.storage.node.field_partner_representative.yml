@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: XRddfkyTrOvzks5lkieHGPxTHoNi9noLxAfpZJr9KEc
 id: node.field_partner_representative
 field_name: field_partner_representative
 entity_type: node

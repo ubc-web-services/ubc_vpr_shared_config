@@ -4,6 +4,8 @@ dependencies:
   module:
     - node
     - text
+_core:
+  default_config_hash: Sh_7jnGG1ewvt2I67NgtAU_eUoNEG8oYvEYwX5QjSaM
 id: node.field_page_supporting_content
 field_name: field_page_supporting_content
 entity_type: node

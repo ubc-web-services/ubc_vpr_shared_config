@@ -18,6 +18,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: _O58lb631h8DANpPsyuNEo3sf-_LSYyIoDFKHwHp2vk
 id: node.ubc_announcement.sidebar_content
 targetEntityType: node
 bundle: ubc_announcement

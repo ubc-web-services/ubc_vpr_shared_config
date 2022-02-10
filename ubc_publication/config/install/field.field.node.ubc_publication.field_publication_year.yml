@@ -6,6 +6,8 @@ dependencies:
     - node.type.ubc_publication
   module:
     - datetime
+_core:
+  default_config_hash: TD3ktKDsx8sO7yaaHs6VQIkEyHX35pXaX-sZEigHbiU
 id: node.ubc_publication.field_publication_year
 field_name: field_publication_year
 entity_type: node

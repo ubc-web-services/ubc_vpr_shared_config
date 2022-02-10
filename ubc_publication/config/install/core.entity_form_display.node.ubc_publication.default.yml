@@ -39,6 +39,8 @@ third_party_settings:
         description: ''
         required_fields: true
         weight: -100
+_core:
+  default_config_hash: eYKd9D-wktTlosJdmqH8Yn5VM8Yq4K9xyIR-29QfkKQ
 id: node.ubc_publication.default
 targetEntityType: node
 bundle: ubc_publication
@@ -126,10 +128,10 @@ content:
     type: datetime_datelist
     weight: 6
     region: content
-    settings: 
+    settings:
       increment: 15
       date_order: YMD
-    third_party_settings: 
+    third_party_settings:
       datetimehideseconds:
         hide: true
   path:

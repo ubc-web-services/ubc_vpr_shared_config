@@ -4,6 +4,8 @@ dependencies:
   module:
     - node
     - taxonomy
+_core:
+  default_config_hash: i1_-tcv925iJes-Z1qhaKQbz-aCWxp1KmKs4PVTPWa0
 id: node.field_event_theme
 field_name: field_event_theme
 entity_type: node

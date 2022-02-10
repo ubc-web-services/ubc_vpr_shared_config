@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: tx6gncquN_BUye6w-tH9j97BlZgK9PHLR649qh3Cn4A
 id: node.field_publication_journal
 field_name: field_publication_journal
 entity_type: node

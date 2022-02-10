@@ -5,6 +5,8 @@ dependencies:
     - field.storage.node.field_event_theme
     - node.type.ubc_event
     - taxonomy.vocabulary.research_theme
+_core:
+  default_config_hash: Z0lNQSfeAeIvMAaAv1ha5N2WsNxaDok-Ec6Hvh2ZSbY
 id: node.ubc_event.field_event_theme
 field_name: field_event_theme
 entity_type: node

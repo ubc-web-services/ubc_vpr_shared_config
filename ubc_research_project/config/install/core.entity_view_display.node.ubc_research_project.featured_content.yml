@@ -13,6 +13,8 @@ dependencies:
   module:
     - responsive_image
     - user
+_core:
+  default_config_hash: awLtG1Ta69Ml3khrAFrNP5-aQjY9eVSzcBB0gPLL7gE
 id: node.ubc_research_project.featured_content
 targetEntityType: node
 bundle: ubc_research_project

@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.node.field_publication_journal
     - node.type.ubc_publication
+_core:
+  default_config_hash: pMWYlyinxxIQL_34WnW8Cgihc7SIeMdp4N7yjSKY5rU
 id: node.ubc_publication.field_publication_journal
 field_name: field_publication_journal
 entity_type: node

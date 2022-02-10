@@ -13,6 +13,8 @@ dependencies:
     - svg_image
     - text
     - user
+_core:
+  default_config_hash: LzZj7TR0ZPoqARtKwa5g2EGnQ7jue88Y9oLuCX9yU9M
 id: node.ubc_project.default
 targetEntityType: node
 bundle: ubc_project

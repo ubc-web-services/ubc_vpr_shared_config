@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: xQx4H5QO4hcnVvyW0y-G_d68M1eu9u7vq1XO-ApK-Cg
 name: 'Research Theme'
 vid: research_theme
 description: 'Associates the content with a research theme'

@@ -7,6 +7,8 @@ dependencies:
   module:
     - allowed_formats
     - text
+_core:
+  default_config_hash: D8ECYsZdD-pUUtLxTnVBb6-GpklH_y8YyRTlSXQo_uk
 third_party_settings:
   allowed_formats:
     filtered_text: filtered_text

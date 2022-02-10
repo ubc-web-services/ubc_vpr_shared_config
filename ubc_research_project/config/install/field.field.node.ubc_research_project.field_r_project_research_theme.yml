@@ -5,6 +5,8 @@ dependencies:
     - field.storage.node.field_r_project_research_theme
     - node.type.ubc_research_project
     - taxonomy.vocabulary.research_theme
+_core:
+  default_config_hash: itVcoAF0lpj0sCRn29fMKi1_dufdPizErmk6ZVLcv1U
 id: node.ubc_research_project.field_r_project_research_theme
 field_name: field_r_project_research_theme
 entity_type: node

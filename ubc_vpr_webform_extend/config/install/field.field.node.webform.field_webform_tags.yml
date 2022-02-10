@@ -5,6 +5,8 @@ dependencies:
     - field.storage.node.field_webform_tags
     - node.type.webform
     - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: MMSgFqgkakvXhZjHI2SpiWtXi7e6OqbqfNZIr0Zo5us
 id: node.webform.field_webform_tags
 field_name: field_webform_tags
 entity_type: node

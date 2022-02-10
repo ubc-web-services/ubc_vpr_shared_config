@@ -4,6 +4,8 @@ dependencies:
   module:
     - node
     - text
+_core:
+  default_config_hash: ccskjHLNkRRzkVltKmpXrUAHkrLcifaqpDnMae-8ODc
 id: node.field_webform_supporting_content
 field_name: field_webform_supporting_content
 entity_type: node

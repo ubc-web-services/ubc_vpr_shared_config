@@ -4,6 +4,8 @@ dependencies:
   module:
     - link
     - node
+_core:
+  default_config_hash: elPd2yVY3UcG__Glt9G5KJM2J089CdWnVAshrHUBeQI
 id: node.field_profile_google_scholar
 field_name: field_profile_google_scholar
 entity_type: node

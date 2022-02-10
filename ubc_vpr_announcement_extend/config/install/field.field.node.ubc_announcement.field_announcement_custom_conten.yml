@@ -11,6 +11,8 @@ dependencies:
     - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: P6gSk8JBXq-5tQrLHZ3KjtFfx9Gs4FMf7XO8xGRkkSk
 id: node.ubc_announcement.field_announcement_custom_conten
 field_name: field_announcement_custom_conten
 entity_type: node

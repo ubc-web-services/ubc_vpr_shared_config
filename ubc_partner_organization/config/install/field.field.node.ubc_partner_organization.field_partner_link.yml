@@ -6,6 +6,8 @@ dependencies:
     - node.type.ubc_partner_organization
   module:
     - link
+_core:
+  default_config_hash: Di4sO9T1tMaBUg6m65NJNN2Mu6Aul0wfWSZoBYRPoCM
 id: node.ubc_partner_organization.field_partner_link
 field_name: field_partner_link
 entity_type: node

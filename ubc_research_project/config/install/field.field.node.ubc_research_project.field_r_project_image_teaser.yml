@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.node.field_r_project_image_teaser
     - node.type.ubc_research_project
+_core:
+  default_config_hash: oIVth-blEAA1QSElilMGVp5OD1aMUZItMrE7GDW_lIQ
 id: node.ubc_research_project.field_r_project_image_teaser
 field_name: field_r_project_image_teaser
 entity_type: node

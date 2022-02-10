@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: seN-Lv5Bk-DFcy0yoj2z2Y38vR_N8FNlJGboe71uops
 id: node.field_publication_projects
 field_name: field_publication_projects
 entity_type: node

@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: JJ_KvUrKBV8yYG-JmxIFQUyv8-46MLuU2gaNhktV9do
 id: projects
 label: Projects
 type: 'canonical_entities:node'

@@ -5,6 +5,8 @@ dependencies:
     - field.storage.node.field_publication_type
     - node.type.ubc_publication
     - taxonomy.vocabulary.publication_type
+_core:
+  default_config_hash: jtoCpOSMvvIrSi8Y9U3iAdDJ9SHY4VBPrk9f4bqoH0E
 id: node.ubc_publication.field_publication_type
 field_name: field_publication_type
 entity_type: node

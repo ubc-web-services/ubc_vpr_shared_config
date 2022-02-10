@@ -16,6 +16,8 @@ dependencies:
     - link
     - text
     - user
+_core:
+  default_config_hash: MX1uU-nG1R1vpLWfz1WjFnandYs5uJzCDrR0cdMZqOI
 id: node.ubc_publication.default
 targetEntityType: node
 bundle: ubc_publication

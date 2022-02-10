@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: Pt2F9tc7x8gJJF_aBS043Eiq6hLuvHG7KiRQ5Cww76g
 name: 'Profile Role'
 vid: profile_role
 description: 'Identifies the profile by role'

@@ -7,6 +7,8 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: Jj3KRFSazdfeBUeINvmMlSLR353NYCsaRiUMLjRZnTE
 id: content_landing_page_supporting_content
 label: 'Content: Landing Page Supporting Content'
 module: views

@@ -7,6 +7,8 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: JTcS9kr2-euZQ0TumXEm3bmYzNL6SuNtdkYFmcQULLg
 id: content_announcement_paragraphs
 label: 'Content: Announcement Paragraphs'
 module: views

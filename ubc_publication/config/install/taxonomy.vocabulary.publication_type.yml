@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: DoYj_yuweIJJp5-WuUcHekznKPsEBergZLGluPLRHFk
 name: 'Publication Type'
 vid: publication_type
 description: ''

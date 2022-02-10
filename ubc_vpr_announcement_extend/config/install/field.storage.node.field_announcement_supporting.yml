@@ -4,6 +4,8 @@ dependencies:
   module:
     - node
     - text
+_core:
+  default_config_hash: wHM2tRMRZbh8L3i5mvXMOshIqnJW-IR8Fm3akA7_sUk
 id: node.field_announcement_supporting
 field_name: field_announcement_supporting
 entity_type: node

@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: bDj18PLaUJJVUPJ-4GcPk00oo_dsrt4p7vpdWxRmbAo
 name: 'Profile Category'
 vid: profile_category
 description: 'Identifies the profile by category'

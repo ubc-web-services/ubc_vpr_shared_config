@@ -5,6 +5,8 @@ dependencies:
     - field.storage.node.field_announcement_theme
     - node.type.ubc_announcement
     - taxonomy.vocabulary.research_theme
+_core:
+  default_config_hash: 9CFgbxZg_UxkWpn3gZySKYEiSiCiihCRCkL0zvjFvds
 id: node.ubc_announcement.field_announcement_theme
 field_name: field_announcement_theme
 entity_type: node

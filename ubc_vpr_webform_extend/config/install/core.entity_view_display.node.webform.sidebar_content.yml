@@ -12,6 +12,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: oKxeWk44xfKXDOyR4DMOOzXt9xJug_wMoDHg3ENdl7Y
 id: node.webform.sidebar_content
 targetEntityType: node
 bundle: webform

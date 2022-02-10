@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: 1ikamQUj8COdDB-wcs3UvcJP3OpNfq2WfRPE8-f8F9U
 id: webform
 label: Webform
 type: 'canonical_entities:node'

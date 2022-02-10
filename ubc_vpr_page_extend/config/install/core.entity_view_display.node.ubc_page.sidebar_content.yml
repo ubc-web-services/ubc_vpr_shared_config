@@ -10,6 +10,8 @@ dependencies:
     - metatag
     - text
     - user
+_core:
+  default_config_hash: bIpbsuuGwcZFq0BIfnFJxJyuZZukXDpC40UUHj4pzN4
 id: node.ubc_page.sidebar_content
 targetEntityType: node
 bundle: ubc_page

@@ -6,6 +6,8 @@ dependencies:
     - node.type.ubc_project
   module:
     - link
+_core:
+  default_config_hash: eUG1urXHZcfkByELF9Pd23otU4l6LNADUSXwINX1RCg
 id: node.ubc_project.field_project_funders
 field_name: field_project_funders
 entity_type: node

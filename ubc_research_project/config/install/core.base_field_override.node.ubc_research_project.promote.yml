@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - node.type.ubc_research_project
+_core:
+  default_config_hash: PCF0h3rIZABVKoPwO2dfgU-sQcYfxQdfzZGN-d-PDUk
 id: node.ubc_research_project.promote
 field_name: promote
 entity_type: node

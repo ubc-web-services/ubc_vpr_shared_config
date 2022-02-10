@@ -18,6 +18,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - user
+_core:
+  default_config_hash: fkLC6uQA9H20rvhWshwBNooktiqDvV0r2fmfmV16kJM
 id: node.ubc_announcement.custom_content
 targetEntityType: node
 bundle: ubc_announcement

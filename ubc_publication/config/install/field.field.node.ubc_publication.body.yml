@@ -20,6 +20,8 @@ third_party_settings:
   text_summary_options:
     show_summary: 1
     summary_help: ''
+_core:
+  default_config_hash: cx07nc_xSJuT9oO2sAGRmzwzjbx0igtyNW7JVvfAack
 id: node.ubc_publication.body
 field_name: body
 entity_type: node

@@ -7,6 +7,8 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: 4QyZLnQAYBrN9H-rqd6w8yHIiG1o0Pc5CsRq6pYb8Ak
 id: content_announcement_supporting_content
 label: 'Content: Announcement Supporting Content'
 module: views

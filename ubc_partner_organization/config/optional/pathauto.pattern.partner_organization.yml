@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: qm7QrCaPspF-YJMkm9xGNsuSUyxSFvzlFVbDGRYWPKY
 id: partner_organization
 label: 'Partner Organization'
 type: 'canonical_entities:node'

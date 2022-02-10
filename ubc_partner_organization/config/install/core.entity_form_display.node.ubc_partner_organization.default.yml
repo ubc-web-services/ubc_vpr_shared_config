@@ -18,6 +18,8 @@ dependencies:
     - path
     - scheduler
     - text
+_core:
+  default_config_hash: EyooHfIm1tph9LHErT6vI9s8eE9ROpjqoVEi7RcDbhA
 id: node.ubc_partner_organization.default
 targetEntityType: node
 bundle: ubc_partner_organization
