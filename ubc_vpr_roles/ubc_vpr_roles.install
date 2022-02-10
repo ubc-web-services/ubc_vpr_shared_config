@@ -10,6 +10,7 @@ function ubc_vpr_roles_install() {
   $config->getEditable('user.role.content_creator')
     ->set('dependencies.config', [
       'filter.format.filtered_text',
+      'filter.format.simple',
       'media.type.file',
       'media.type.image',
       'media.type.private_file',
@@ -114,6 +115,7 @@ function ubc_vpr_roles_install() {
       'use bulk_upload_documents bulk upload form',
       'use bulk_upload_images bulk upload form',
       'use text format filtered_text',
+      'use text format simple',
       'view all content item revisions',
       'view all media revisions',
       'view own unpublished content',
@@ -131,6 +133,7 @@ function ubc_vpr_roles_install() {
   $config->getEditable('user.role.editor')
     ->set('dependencies.config', [
       'filter.format.filtered_text',
+      'filter.format.simple',
       'media.type.file',
       'media.type.image',
       'media.type.private_file',
@@ -334,6 +337,7 @@ function ubc_vpr_roles_install() {
       'use bulk_upload_documents bulk upload form',
       'use bulk_upload_images bulk upload form',
       'use text format filtered_text',
+      'use text format simple',
       'view all content item revisions',
       'view all media revisions',
       'view all revisions',
