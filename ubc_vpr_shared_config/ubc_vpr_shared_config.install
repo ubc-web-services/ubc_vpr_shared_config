@@ -211,7 +211,7 @@ function ubc_vpr_shared_config_update_9004() {
       'card_vertical' => 'card_vertical',
       'card_rollover' => 'card_rollover',
       'card_text' => 'card_text',
-    ]),
+    ])
     ->set('settings.handler_settings.target_bundles_drag_drop', [
       'card' => [
         'weight' => '4',
