@@ -42,6 +42,14 @@ function ubc_vpr_shared_config_install() {
       'paragraphs.paragraphs_type.icon_card',
       'paragraphs.paragraphs_type.image_card',
     ])
+    ->set('settings.handler_settings.target_bundles', [
+      'icon_card' => 'icon_card',
+      'card_horizontal' => 'card_horizontal',
+      'image_card' => 'image_card',
+      'card_vertical' => 'card_vertical',
+      'card_rollover' => 'card_rollover',
+      'card_text' => 'card_text',
+    ])
     ->set('settings.handler_settings.target_bundles_drag_drop', [
       'card' => [
         'weight' => '4',
@@ -49,55 +57,55 @@ function ubc_vpr_shared_config_install() {
       ],
       'card_group' => [
         'weight' => '5',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'card_horizontal' => [
         'weight' => '10',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'card_rollover' => [
         'weight' => '11',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'card_text' => [
         'weight' => '12',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'card_vertical' => [
         'weight' => '15',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'feature_image' => [
         'weight' => '16',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'icon_card' => [
         'weight' => '17',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'image_card' => [
         'weight' => '18',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'slide' => [
         'weight' => '19',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'slideshow' => [
         'weight' => '20',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'tab' => [
         'weight' => '21',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'tabcordion' => [
         'weight' => '22',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'text' => [
         'weight' => '23',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
     ])
     ->save();
