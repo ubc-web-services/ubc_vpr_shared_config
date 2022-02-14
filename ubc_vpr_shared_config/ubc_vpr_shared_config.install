@@ -29,7 +29,7 @@ function ubc_vpr_shared_config_install() {
     ->set('display.block_2.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
     ->save();
   $config->getEditable('filter.format.filtered_text')
-    ->set('filters.editor_button_link_filter.settings.button_link_style_options', "|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button")
+    ->set('filters.editor_button_link_filter.settings.button_link_style_options', '|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button')
     ->save();
     $config->getEditable('field.field.paragraph.card_group.field_paragraph_card')
     ->set('dependencies.config', [
@@ -189,7 +189,7 @@ function ubc_vpr_shared_config_update_9002() {
 function ubc_vpr_shared_config_update_9004() {
   $config = \Drupal::service('config.factory');
   $config->getEditable('filter.format.filtered_text')
-    ->set('filters.editor_button_link_filter.settings.button_link_style_options', "|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button")
+    ->set('filters.editor_button_link_filter.settings.button_link_style_options', '|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button')
     ->save();
   $config->getEditable('field.field.paragraph.card_group.field_paragraph_card')
     ->set('dependencies.config', [
