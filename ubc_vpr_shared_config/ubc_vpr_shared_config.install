@@ -189,8 +189,17 @@ function ubc_vpr_shared_config_update_9002() {
 function ubc_vpr_shared_config_update_9004() {
   $config = \Drupal::service('config.factory');
   $config->getEditable('filter.format.filtered_text')
-    ->set('filters.editor_button_link_filter.settings.button_link_style_options', '|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button')
+    ->set('filters.editor_button_link_filter.settings', [
+      'button_link_style_options' => '|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button',
+    ])
     ->save();
+}
+
+/**
+ * Update paragraph formats.
+ */
+function ubc_vpr_shared_config_update_9005() {
+  $config = \Drupal::service('config.factory');
   $config->getEditable('field.field.paragraph.card_group.field_paragraph_card')
     ->set('dependencies.config', [
       'field.storage.paragraph.field_paragraph_card',
@@ -202,7 +211,7 @@ function ubc_vpr_shared_config_update_9004() {
       'paragraphs.paragraphs_type.icon_card',
       'paragraphs.paragraphs_type.image_card',
     ])
-    ->set('settings.handler.handler_settings.target_bundles', [
+    ->set('settings.handler_settings.target_bundles', [
       'icon_card' => 'icon_card',
       'card_horizontal' => 'card_horizontal',
       'image_card' => 'image_card',
@@ -213,59 +222,59 @@ function ubc_vpr_shared_config_update_9004() {
     ->set('settings.handler_settings.target_bundles_drag_drop', [
       'card' => [
         'weight' => '4',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'card_group' => [
         'weight' => '5',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'card_horizontal' => [
         'weight' => '10',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'card_rollover' => [
         'weight' => '11',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'card_text' => [
         'weight' => '12',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'card_vertical' => [
         'weight' => '15',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'feature_image' => [
         'weight' => '16',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'icon_card' => [
         'weight' => '17',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'image_card' => [
         'weight' => '18',
-        'enabled' => true,
+        'enabled' => 'true',
       ],
       'slide' => [
         'weight' => '19',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'slideshow' => [
         'weight' => '20',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'tab' => [
         'weight' => '21',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'tabcordion' => [
         'weight' => '22',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
       'text' => [
         'weight' => '23',
-        'enabled' => false,
+        'enabled' => 'false',
       ],
     ])
     ->save();
