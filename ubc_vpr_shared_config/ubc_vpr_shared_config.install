@@ -188,12 +188,10 @@ function ubc_vpr_shared_config_update_9002() {
 /**
  * Update button formats.
  */
-function ubc_vpr_shared_config_update_9003() {
+function ubc_vpr_shared_config_update_9004() {
   $config = \Drupal::service('config.factory');
   $config->getEditable('filter.format.filtered_text')
-    ->set('filters.editor_button_link_filter.settings.button_link_style_options', '|No Style\r\nunit-button|Unit Button\r\nunit-button unit-button--block|Full width Unit Button\r\n"
-    button_link_size_options: "|Text Normal\r\ntext-xs unit-button--text-xs|Text Extra Small\r\ntext-sm unit-button--text-sm|Text Small\r\ntext-lg unit-button--text-lg|Text Large\r\ntext-xl unit-button--text-xl|Text XLarge\r\ntext-2xl unit-button--text-2xl| Text XXLarge"
-    button_link_style_options: "|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button')
+    ->set('filters.editor_button_link_filter.settings.button_link_style_options', '|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button')
     ->save();
   $config->getEditable('field.field.paragraph.card_group.field_paragraph_card')
     ->set('dependencies.config', [
