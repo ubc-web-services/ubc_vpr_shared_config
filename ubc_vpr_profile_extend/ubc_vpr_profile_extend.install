@@ -251,6 +251,10 @@ function ubc_vpr_profile_extend_install() {
       'settings' => [],
     ])
     ->save();
+  // allow unlimited departments / units
+  $config->getEditable('field.storage.node.field_profile_department_unit')
+    ->set('cardinality', '-1')
+    ->save();
 }
 
 /**
@@ -261,10 +265,13 @@ function ubc_vpr_profile_extend_install() {
 function ubc_vpr_profile_extend_uninstall() {
 }
 
- /**
- * Update 9001 - sample update.
+/**
+ * Update to allow allow unlimited departments / units.
  */
- /*
 function ubc_vpr_profile_extend_update_9001() {
+  $config = \Drupal::service('config.factory');
+  $config->getEditable('field.storage.node.field_profile_department_unit')
+    ->set('cardinality', '-1')
+    ->save();
 }
-*/
+
