@@ -30,6 +30,7 @@ dependencies:
     - block
     - contextual
     - dropzonejs
+    - entityqueue
     - field_ui
     - file
     - file_delete
@@ -37,10 +38,14 @@ dependencies:
     - google_analytics
     - media
     - media_bulk_upload
+    - menu_position
     - metatag
     - node
     - paragraphs
     - path
+    - pathauto
+    - quick_node_clone
+    - rebuild_cache_access
     - redirect
     - role_delegation
     - scheduler
@@ -53,10 +58,10 @@ dependencies:
     - webform
     - webform_node
 _core:
-  default_config_hash: CHGoBIbxL-wiMH0HBeu-HqE1d7V33oXs5QB2T0p-JXM
+  default_config_hash: 0XfL8Lrj5rYeMMbypD62KHBtv6wyyNHNif8zrgFy3jI
 id: super_user
 label: 'Super User'
-weight: -6
+weight: -5
 is_admin: false
 permissions:
   - 'access administration pages'
@@ -74,14 +79,20 @@ permissions:
   - 'access webform submission user'
   - 'add content item entities'
   - 'administer blocks'
+  - 'administer content types'
+  - 'administer entityqueue'
   - 'administer google analytics'
   - 'administer menu'
+  - 'administer menu positions'
   - 'administer meta tags'
   - 'administer node display'
+  - 'administer node fields'
   - 'administer node form display'
   - 'administer nodes'
+  - 'administer pathauto'
   - 'administer redirect settings'
   - 'administer redirects'
+  - 'administer site configuration'
   - 'administer taxonomy'
   - 'administer themes'
   - 'administer url aliases'
@@ -91,7 +102,13 @@ permissions:
   - 'administer webform submission'
   - 'assign content_creator role'
   - 'assign editor role'
+  - 'assign read_only role'
   - 'assign super_user role'
+  - 'clone ubc_announcement content'
+  - 'clone ubc_event content'
+  - 'clone ubc_landing_page content'
+  - 'clone ubc_page content'
+  - 'clone webform content'
   - 'create file media'
   - 'create image media'
   - 'create private_file media'
@@ -209,6 +226,10 @@ permissions:
   - 'edit terms in tags'
   - 'edit webform submissions any node'
   - 'edit webform submissions own node'
+  - 'manipulate all entityqueues'
+  - 'manipulate entityqueues'
+  - 'notify of path changes'
+  - 'rebuild cache access'
   - 'revert all content item revisions'
   - 'revert all revisions'
   - 'revert homepage revisions'
