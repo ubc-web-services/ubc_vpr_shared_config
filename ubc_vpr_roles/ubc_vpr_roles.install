@@ -173,7 +173,7 @@ function ubc_vpr_roles_install() {
       'google_analytics',
       'media',
       'media_bulk_upload',
-      'menu_position'.
+      'menu_position',
       'metatag',
       'node',
       'paragraphs',
