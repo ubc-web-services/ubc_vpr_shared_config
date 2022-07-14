@@ -23,6 +23,34 @@ function ubc_vpr_shared_config_install() {
   $config->getEditable('image.style.hero_focal_point_325')
     ->set('effects.205c78b7-fd87-4be5-a494-908dd2205e7f.data.height', '102')
     ->save();
+  $config->getEditable('image.style.card_focal_point_lg')
+    ->set('effects', [
+      '5db0390d-b0f0-4451-b47d-3dd96f6d141b' => [
+        'uuid' => '5db0390d-b0f0-4451-b47d-3dd96f6d141b',
+        'id' => 'focal_point_scale_and_crop',
+        'weight' => '2',
+        'data' => [
+          'width' => '640',
+          'height' => '556',
+          'crop_type' => 'focal_point',
+        ],
+      ],
+    ])
+    ->save();
+  $config->getEditable('image.style.card_focal_point_sm')
+    ->set('effects', [
+      'cd835918-a0ee-41a5-bed0-24c4e971d6e2' => [
+        'uuid' => 'cd835918-a0ee-41a5-bed0-24c4e971d6e2',
+        'id' => 'focal_point_scale_and_crop',
+        'weight' => '2',
+        'data' => [
+          'width' => '380',
+          'height' => '330',
+          'crop_type' => 'focal_point',
+        ],
+      ],
+    ])
+    ->save();
   $config->getEditable('views.view.content_announcements_latest')
     ->set('display.default.display_options.css_class', 'px-8 pt-2 pb-6 mt-8 border border-ubc-blue-sea')
     ->set('display.default.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
@@ -334,6 +362,41 @@ unit-button--dark|Dark Button
 unit-button--simple|Simple Button
 unit-button--outline|Outline Button
 unit-button--transparent|Transparent Button',
+    ])
+    ->save();
+}
+
+/**
+ * Update image styles.
+ */
+function ubc_vpr_shared_config_update_9008() {
+  $config = \Drupal::service('config.factory');
+  $config->getEditable('image.style.card_focal_point_lg')
+    ->set('effects', [
+      '5db0390d-b0f0-4451-b47d-3dd96f6d141b' => [
+        'uuid' => '5db0390d-b0f0-4451-b47d-3dd96f6d141b',
+        'id' => 'focal_point_scale_and_crop',
+        'weight' => '2',
+        'data' => [
+          'width' => '640',
+          'height' => '556',
+          'crop_type' => 'focal_point',
+        ],
+      ],
+    ])
+    ->save();
+  $config->getEditable('image.style.card_focal_point_sm')
+    ->set('effects', [
+      'cd835918-a0ee-41a5-bed0-24c4e971d6e2' => [
+        'uuid' => 'cd835918-a0ee-41a5-bed0-24c4e971d6e2',
+        'id' => 'focal_point_scale_and_crop',
+        'weight' => '2',
+        'data' => [
+          'width' => '380',
+          'height' => '330',
+          'crop_type' => 'focal_point',
+        ],
+      ],
     ])
     ->save();
 }
