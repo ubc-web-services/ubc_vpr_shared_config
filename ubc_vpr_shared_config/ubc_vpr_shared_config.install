@@ -31,7 +31,26 @@ function ubc_vpr_shared_config_install() {
   $config->getEditable('filter.format.filtered_text')
     ->set('filters.editor_button_link_filter.settings.button_link_style_options', '|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button')
     ->save();
-    $config->getEditable('field.field.paragraph.card_group.field_paragraph_card')
+  $config->getEditable('filter.format.filtered_text')
+    ->set('filters.editor_button_link_filter.settings', [
+      'button_link_options' => '|No Style
+unit-button|Unit Button
+unit-button unit-button--block|Full width Unit Button',
+      'button_link_size_options' => '|Text Normal
+text-xs unit-button--text-xs|Text Extra Small
+text-sm unit-button--text-sm|Text Small
+text-lg unit-button--text-lg|Text Large
+text-xl unit-button--text-xl|Text XLarge
+text-2xl unit-button--text-2xl| Text XXLarge',
+      'button_link_style_options' => '|Default Style
+unit-button--light|Light Button
+unit-button--dark|Dark Button
+unit-button--simple|Simple Button
+unit-button--outline|Outline Button
+unit-button--transparent|Transparent Button',
+    ])
+    ->save();
+  $config->getEditable('field.field.paragraph.card_group.field_paragraph_card')
     ->set('dependencies.config', [
       'field.storage.paragraph.field_paragraph_card',
       'paragraphs.paragraphs_type.card_group',
@@ -198,7 +217,12 @@ function ubc_vpr_shared_config_update_9004() {
   $config = \Drupal::service('config.factory');
   $config->getEditable('filter.format.filtered_text')
     ->set('filters.editor_button_link_filter.settings', [
-      'button_link_style_options' => '|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button',
+      'button_link_style_options' => '|Default Style
+unit-button--light|Light Button
+unit-button--dark|Dark Button
+unit-button--simple|Simple Button
+unit-button--outline|Outline Button
+unit-button--transparent|Transparent Button',
     ])
     ->save();
 }
@@ -284,6 +308,32 @@ function ubc_vpr_shared_config_update_9005() {
         'weight' => '23',
         'enabled' => 'false',
       ],
+    ])
+    ->save();
+}
+
+/**
+ * Update button formats... again.
+ */
+function ubc_vpr_shared_config_update_9006() {
+  $config = \Drupal::service('config.factory');
+  $config->getEditable('filter.format.filtered_text')
+    ->set('filters.editor_button_link_filter.settings', [
+      'button_link_options' => '|No Style
+unit-button|Unit Button
+unit-button unit-button--block|Full width Unit Button',
+      'button_link_size_options' => '|Text Normal
+text-xs unit-button--text-xs|Text Extra Small
+text-sm unit-button--text-sm|Text Small
+text-lg unit-button--text-lg|Text Large
+text-xl unit-button--text-xl|Text XLarge
+text-2xl unit-button--text-2xl| Text XXLarge',
+      'button_link_style_options' => '|Default Style
+unit-button--light|Light Button
+unit-button--dark|Dark Button
+unit-button--simple|Simple Button
+unit-button--outline|Outline Button
+unit-button--transparent|Transparent Button',
     ])
     ->save();
 }
