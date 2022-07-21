@@ -12,8 +12,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: 1MEpJlG575XSBLrXqZcZ12-i1tkIdDqz9LAY3aJk-70
 id: node.ubc_project.teaser
 targetEntityType: node
 bundle: ubc_project

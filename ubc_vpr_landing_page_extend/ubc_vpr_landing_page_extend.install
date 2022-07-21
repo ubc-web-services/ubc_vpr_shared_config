@@ -12,6 +12,7 @@ function ubc_vpr_landing_page_extend_install() {
     ->set('hidden', [
       'field_landing_supporting_content' => true,
       'field_landing_image_teaser' => true,
+      'field_show_gradient_on_image' => true,
     ])
     ->save();
   // update the shown fields on the featured_content display
@@ -36,7 +37,10 @@ function ubc_vpr_landing_page_extend_install() {
     ->save();
   // set up the supporting content field on the form display
   $config->getEditable('core.entity_form_display.node.ubc_landing_page.default')
-    ->clear('hidden.field_landing_supporting_content')
+    ->clear(
+      'hidden.field_show_gradient_on_image',
+      'hidden.field_landing_supporting_content',
+      )
     ->set('dependencies.module', [
       'allowed_formats',
       'field_group',
@@ -66,6 +70,15 @@ function ubc_vpr_landing_page_extend_install() {
         'placeholder' => '',
         'summary_rows' => '3',
         'show_summary' => 'true',
+      ],
+    ])
+    ->set('content.field_show_gradient_on_image', [
+      'weight' => '2',
+      'type' => 'boolean_checkbox',
+      'region' => 'content',
+      'third_party_settings' => [],
+      'settings' => [
+        'display_label' => 'true',
       ],
     ])
     ->set('content.field_landing_supporting_content', [

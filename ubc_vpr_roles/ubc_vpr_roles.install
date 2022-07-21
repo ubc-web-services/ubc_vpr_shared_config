@@ -7,6 +7,46 @@
  */
 function ubc_vpr_roles_install() {
   $config = \Drupal::service('config.factory');
+  $config->getEditable('user.role.anonymous')
+    ->set('dependencies.module', [
+      'filter',
+      'media',
+      'search',
+      'system',
+      'ubc_content_items',
+    ])
+    ->set('permissions', [
+      'access content',
+      'search content',
+      'use text format restricted_html',
+      'view media',
+      'view published content item entities',
+    ])
+    ->save();
+  $config->getEditable('user.role.authenticated')
+    ->set('dependencies.config', [
+      'filter.format.restricted_html',
+    ])
+    ->set('dependencies.module', [
+      'contact',
+      'filter',
+      'google_analytics',
+      'media',
+      'search',
+      'shortcut',
+      'system',
+      'ubc_content_items',
+    ])
+    ->set('permissions', [
+      'access content',
+      'access shortcuts',
+      'opt-in or out of google analytics tracking',
+      'search content',
+      'use text format restricted_html',
+      'view media',
+      'view published content item entities',
+    ])
+    ->save();
   $config->getEditable('user.role.content_creator')
     ->set('dependencies.config', [
       'filter.format.filtered_text',
@@ -21,6 +61,7 @@ function ubc_vpr_roles_install() {
       'node.type.ubc_event',
       'node.type.ubc_page',
       'node.type.ubc_profile',
+      'node.type.webform',
       'taxonomy.vocabulary.tags',
     ])
     ->set('dependencies.module', [
@@ -41,6 +82,8 @@ function ubc_vpr_roles_install() {
       'ubc_content_items',
     ])
     ->set('permissions', [
+      'access content overview',
+      'access files overview',
       'access media overview',
       'access site in maintenance mode',
       'access taxonomy overview',
@@ -48,10 +91,15 @@ function ubc_vpr_roles_install() {
       'access tour',
       'add content item entities',
       'administer menu',
+      'administer nodes',
       'clone ubc_announcement content',
       'clone ubc_event content',
+      'clone ubc_page content',
+      'clone ubc_profile content',
+      'clone webform content',
       'create file media',
       'create image media',
+      'create media',
       'create private_file media',
       'create remote_video media',
       'create svg_icon media',
@@ -61,6 +109,7 @@ function ubc_vpr_roles_install() {
       'create ubc_page content',
       'create ubc_profile content',
       'create video media',
+      'create webform content',
       'delete all content item revisions',
       'delete any file media',
       'delete any image media',
@@ -73,6 +122,7 @@ function ubc_vpr_roles_install() {
       'delete any ubc_page content',
       'delete any ubc_profile content',
       'delete any video media',
+      'delete any webform content',
       'delete content item entities',
       'delete media',
       'delete own file media',
@@ -85,7 +135,13 @@ function ubc_vpr_roles_install() {
       'delete own ubc_page content',
       'delete own ubc_profile content',
       'delete own video media',
+      'delete own webform content',
       'delete terms in tags',
+      'delete ubc_announcement revisions',
+      'delete ubc_event revisions',
+      'delete ubc_page revisions',
+      'delete ubc_profile revisions',
+      'delete webform revisions',
       'dropzone upload files',
       'edit any file media',
       'edit any image media',
@@ -97,6 +153,7 @@ function ubc_vpr_roles_install() {
       'edit any ubc_page content',
       'edit any ubc_profile content',
       'edit any video media',
+      'edit any webform content',
       'edit content item entities',
       'edit own file media',
       'edit own image media',
@@ -106,7 +163,9 @@ function ubc_vpr_roles_install() {
       'edit own ubc_announcement content',
       'edit own ubc_event content',
       'edit own ubc_page content',
+      'edit own ubc_profile content',
       'edit own video media',
+      'edit own webform content',
       'edit terms in tags',
       'manipulate entityqueues',
       'revert all content item revisions',
@@ -114,6 +173,7 @@ function ubc_vpr_roles_install() {
       'revert ubc_event revisions',
       'revert ubc_page revisions',
       'revert ubc_profile revisions',
+      'revert webform revisions',
       'schedule publishing of nodes',
       'update any media',
       'update media',
@@ -133,6 +193,7 @@ function ubc_vpr_roles_install() {
       'view ubc_profile revisions',
       'view unpublished content item entities',
       'view unpublished paragraphs',
+      'view webform revisions',
     ])
     ->save();
   $config->getEditable('user.role.editor')
@@ -179,6 +240,7 @@ function ubc_vpr_roles_install() {
       'paragraphs',
       'path',
       'quick_node_clone',
+      'rebuild_cache_access',
       'redirect',
       'role_delegation',
       'scheduler',
@@ -205,9 +267,12 @@ function ubc_vpr_roles_install() {
       'access webform submission user',
       'add content item entities',
       'administer blocks',
+      'administer easy breadcrumb',
       'administer google analytics',
       'administer menu',
+      'administer menu positions',
       'administer meta tags',
+      'administer nodes',
       'administer redirects',
       'administer taxonomy',
       'administer url aliases',
@@ -220,8 +285,11 @@ function ubc_vpr_roles_install() {
       'clone ubc_event content',
       'clone ubc_landing_page content',
       'clone ubc_page content',
+      'clone ubc_profile content',
+      'clone webform content',
       'create file media',
       'create image media',
+      'create media',
       'create private_file media',
       'create remote_video media',
       'create svg_icon media',
@@ -321,6 +389,7 @@ function ubc_vpr_roles_install() {
       'edit own ubc_event content',
       'edit own ubc_landing_page content',
       'edit own ubc_page content',
+      'edit own ubc_profile content',
       'edit own video media',
       'edit own webform',
       'edit own webform content',
@@ -338,6 +407,7 @@ function ubc_vpr_roles_install() {
       'edit webform submissions own node',
       'manipulate all entityqueues',
       'manipulate entityqueues',
+      'rebuild cache access',
       'revert all content item revisions',
       'revert all revisions',
       'revert homepage revisions',
@@ -384,6 +454,24 @@ function ubc_vpr_roles_install() {
 function ubc_vpr_roles_update_9021() {
   $config = \Drupal::service('config.factory');
 
+  // update anonymous user permissions
+  $config->getEditable('user.role.anonymous')
+    ->set('dependencies.module', [
+      'filter',
+      'media',
+      'search',
+      'system',
+      'ubc_content_items',
+    ])
+    ->set('permissions', [
+      'access content',
+      'search content',
+      'use text format restricted_html',
+      'view media',
+      'view published content item entities',
+    ])
+    ->save();
+
   // update content creator permissions
   $config->getEditable('user.role.content_creator')
     ->set('dependencies.module', [
@@ -404,6 +492,8 @@ function ubc_vpr_roles_update_9021() {
       'ubc_content_items',
     ])
     ->set('permissions', [
+      'access content overview',
+      'access files overview',
       'access media overview',
       'access site in maintenance mode',
       'access taxonomy overview',
@@ -411,10 +501,15 @@ function ubc_vpr_roles_update_9021() {
       'access tour',
       'add content item entities',
       'administer menu',
+      'administer nodes',
       'clone ubc_announcement content',
       'clone ubc_event content',
+      'clone ubc_page content',
+      'clone ubc_profile content',
+      'clone webform content',
       'create file media',
       'create image media',
+      'create media',
       'create private_file media',
       'create remote_video media',
       'create svg_icon media',
@@ -424,6 +519,7 @@ function ubc_vpr_roles_update_9021() {
       'create ubc_page content',
       'create ubc_profile content',
       'create video media',
+      'create webform content',
       'delete all content item revisions',
       'delete any file media',
       'delete any image media',
@@ -436,6 +532,7 @@ function ubc_vpr_roles_update_9021() {
       'delete any ubc_page content',
       'delete any ubc_profile content',
       'delete any video media',
+      'delete any webform content',
       'delete content item entities',
       'delete media',
       'delete own file media',
@@ -448,7 +545,13 @@ function ubc_vpr_roles_update_9021() {
       'delete own ubc_page content',
       'delete own ubc_profile content',
       'delete own video media',
+      'delete own webform content',
       'delete terms in tags',
+      'delete ubc_announcement revisions',
+      'delete ubc_event revisions',
+      'delete ubc_page revisions',
+      'delete ubc_profile revisions',
+      'delete webform revisions',
       'dropzone upload files',
       'edit any file media',
       'edit any image media',
@@ -460,6 +563,7 @@ function ubc_vpr_roles_update_9021() {
       'edit any ubc_page content',
       'edit any ubc_profile content',
       'edit any video media',
+      'edit any webform content',
       'edit content item entities',
       'edit own file media',
       'edit own image media',
@@ -469,7 +573,9 @@ function ubc_vpr_roles_update_9021() {
       'edit own ubc_announcement content',
       'edit own ubc_event content',
       'edit own ubc_page content',
+      'edit own ubc_profile content',
       'edit own video media',
+      'edit own webform content',
       'edit terms in tags',
       'manipulate entityqueues',
       'revert all content item revisions',
@@ -477,6 +583,7 @@ function ubc_vpr_roles_update_9021() {
       'revert ubc_event revisions',
       'revert ubc_page revisions',
       'revert ubc_profile revisions',
+      'revert webform revisions',
       'schedule publishing of nodes',
       'update any media',
       'update media',
@@ -496,6 +603,7 @@ function ubc_vpr_roles_update_9021() {
       'view ubc_profile revisions',
       'view unpublished content item entities',
       'view unpublished paragraphs',
+      'view webform revisions',
     ])
     ->save();
 
@@ -518,6 +626,7 @@ function ubc_vpr_roles_update_9021() {
       'paragraphs',
       'path',
       'quick_node_clone',
+      'rebuild_cache_access',
       'redirect',
       'role_delegation',
       'scheduler',
@@ -544,9 +653,12 @@ function ubc_vpr_roles_update_9021() {
       'access webform submission user',
       'add content item entities',
       'administer blocks',
+      'administer easy breadcrumb',
       'administer google analytics',
       'administer menu',
+      'administer menu positions',
       'administer meta tags',
+      'administer nodes',
       'administer redirects',
       'administer taxonomy',
       'administer url aliases',
@@ -559,8 +671,11 @@ function ubc_vpr_roles_update_9021() {
       'clone ubc_event content',
       'clone ubc_landing_page content',
       'clone ubc_page content',
+      'clone ubc_profile content',
+      'clone webform content',
       'create file media',
       'create image media',
+      'create media',
       'create private_file media',
       'create remote_video media',
       'create svg_icon media',
@@ -660,6 +775,7 @@ function ubc_vpr_roles_update_9021() {
       'edit own ubc_event content',
       'edit own ubc_landing_page content',
       'edit own ubc_page content',
+      'edit own ubc_profile content',
       'edit own video media',
       'edit own webform',
       'edit own webform content',
@@ -677,6 +793,7 @@ function ubc_vpr_roles_update_9021() {
       'edit webform submissions own node',
       'manipulate all entityqueues',
       'manipulate entityqueues',
+      'rebuild cache access',
       'revert all content item revisions',
       'revert all revisions',
       'revert homepage revisions',
@@ -722,6 +839,7 @@ function ubc_vpr_roles_update_9021() {
       'block',
       'contextual',
       'dropzonejs',
+      'easy_breadcrumb',
       'entityqueue',
       'field_ui',
       'file',
@@ -767,6 +885,7 @@ function ubc_vpr_roles_update_9021() {
       'add content item entities',
       'administer blocks',
       'administer content types',
+      'administer easy breadcrumb',
       'administer entityqueue',
       'administer google analytics',
       'administer menu',
@@ -795,9 +914,11 @@ function ubc_vpr_roles_update_9021() {
       'clone ubc_event content',
       'clone ubc_landing_page content',
       'clone ubc_page content',
+      'clone ubc_profile content',
       'clone webform content',
       'create file media',
       'create image media',
+      'create media',
       'create private_file media',
       'create remote_video media',
       'create svg_icon media',
@@ -950,6 +1071,7 @@ function ubc_vpr_roles_update_9021() {
       'view ubc_profile revisions',
       'view unpublished content item entities',
       'view unpublished paragraphs',
+      'view update notifications',
       'view webform revisions',
       'view webform submissions any node',
       'view webform submissions own node',

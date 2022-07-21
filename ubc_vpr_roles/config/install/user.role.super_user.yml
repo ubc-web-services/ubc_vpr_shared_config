@@ -30,6 +30,7 @@ dependencies:
     - block
     - contextual
     - dropzonejs
+    - easy_breadcrumb
     - entityqueue
     - field_ui
     - file
@@ -54,14 +55,13 @@ dependencies:
     - toolbar
     - tour
     - ubc_content_items
+    - update
     - views_ui
     - webform
     - webform_node
-_core:
-  default_config_hash: 0XfL8Lrj5rYeMMbypD62KHBtv6wyyNHNif8zrgFy3jI
 id: super_user
 label: 'Super User'
-weight: -5
+weight: -6
 is_admin: false
 permissions:
   - 'access administration pages'
@@ -80,6 +80,7 @@ permissions:
   - 'add content item entities'
   - 'administer blocks'
   - 'administer content types'
+  - 'administer easy breadcrumb'
   - 'administer entityqueue'
   - 'administer google analytics'
   - 'administer menu'
@@ -108,9 +109,11 @@ permissions:
   - 'clone ubc_event content'
   - 'clone ubc_landing_page content'
   - 'clone ubc_page content'
+  - 'clone ubc_profile content'
   - 'clone webform content'
   - 'create file media'
   - 'create image media'
+  - 'create media'
   - 'create private_file media'
   - 'create remote_video media'
   - 'create svg_icon media'
@@ -263,6 +266,7 @@ permissions:
   - 'view ubc_profile revisions'
   - 'view unpublished content item entities'
   - 'view unpublished paragraphs'
+  - 'view update notifications'
   - 'view webform revisions'
   - 'view webform submissions any node'
   - 'view webform submissions own node'

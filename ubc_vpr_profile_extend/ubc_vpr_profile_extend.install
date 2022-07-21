@@ -162,6 +162,13 @@ function ubc_vpr_profile_extend_install() {
       'third_party_settings' => [],
       'settings' => [],
     ])
+    ->set('content.field_profile_department_unit', [
+      'weight' => '4',
+      'type' => 'options_select',
+      'region' => 'content',
+      'third_party_settings' => [],
+      'settings' => [],
+    ])
     ->set('content.field_profile_category', [
       'weight' => '7',
       'type' => 'options_select',
