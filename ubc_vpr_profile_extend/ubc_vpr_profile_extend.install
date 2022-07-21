@@ -262,6 +262,52 @@ function ubc_vpr_profile_extend_install() {
   $config->getEditable('field.storage.node.field_profile_department_unit')
     ->set('cardinality', '-1')
     ->save();
+  // set up fields on the card display
+  $config->getEditable('core.entity_view_display.node.ubc_profile.card_horizontal')
+    ->set('content.field_profile_name_prefix', [
+      'weight' => '0',
+      'type' => 'string',
+      'region' => 'content',
+      'label' => 'hidden',
+      'third_party_settings' => [],
+      'settings' => [
+        'link_to_entity' => false,
+      ],
+    ])
+    ->set('content.field_profile_name_suffix', [
+      'weight' => '1',
+      'type' => 'string',
+      'region' => 'content',
+      'label' => 'hidden',
+      'third_party_settings' => [],
+      'settings' => [
+        'link_to_entity' => false,
+      ],
+    ])
+    ->save();
+  // set up fields on the card display
+  $config->getEditable('core.entity_view_display.node.ubc_profile.card_vertical')
+    ->set('content.field_profile_name_prefix', [
+      'weight' => '0',
+      'type' => 'string',
+      'region' => 'content',
+      'label' => 'hidden',
+      'third_party_settings' => [],
+      'settings' => [
+        'link_to_entity' => false,
+      ],
+    ])
+    ->set('content.field_profile_name_suffix', [
+      'weight' => '1',
+      'type' => 'string',
+      'region' => 'content',
+      'label' => 'hidden',
+      'third_party_settings' => [],
+      'settings' => [
+        'link_to_entity' => false,
+      ],
+    ])
+    ->save();
 }
 
 /**
@@ -282,3 +328,55 @@ function ubc_vpr_profile_extend_update_9001() {
     ->save();
 }
 
+/**
+ * Update to add additional fields to card styles
+ */
+function ubc_vpr_profile_extend_update_9002() {
+  $config = \Drupal::service('config.factory');
+  // set up fields on the card display
+  $config->getEditable('core.entity_view_display.node.ubc_profile.card_horizontal')
+    ->set('content.field_profile_name_prefix', [
+      'weight' => '0',
+      'type' => 'string',
+      'region' => 'content',
+      'label' => 'hidden',
+      'third_party_settings' => [],
+      'settings' => [
+        'link_to_entity' => false,
+      ],
+    ])
+    ->set('content.field_profile_name_suffix', [
+      'weight' => '1',
+      'type' => 'string',
+      'region' => 'content',
+      'label' => 'hidden',
+      'third_party_settings' => [],
+      'settings' => [
+        'link_to_entity' => false,
+      ],
+    ])
+    ->save();
+  // set up fields on the card display
+  $config->getEditable('core.entity_view_display.node.ubc_profile.card_vertical')
+    ->set('content.field_profile_name_prefix', [
+      'weight' => '0',
+      'type' => 'string',
+      'region' => 'content',
+      'label' => 'hidden',
+      'third_party_settings' => [],
+      'settings' => [
+        'link_to_entity' => false,
+      ],
+    ])
+    ->set('content.field_profile_name_suffix', [
+      'weight' => '1',
+      'type' => 'string',
+      'region' => 'content',
+      'label' => 'hidden',
+      'third_party_settings' => [],
+      'settings' => [
+        'link_to_entity' => false,
+      ],
+    ])
+    ->save();
+}
