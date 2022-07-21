@@ -12,6 +12,7 @@ function ubc_vpr_event_extend_install() {
     ->set('hidden', [
       'field_event_image_teaser' => true,
       'field_event_supporting_content' => true,
+      'field_show_gradient_on_image' => true,
   ])
   ->save();
   // update the shown fields on the featured_content display
@@ -34,6 +35,7 @@ function ubc_vpr_event_extend_install() {
     ->clear(
       'hidden.field_event_image_teaser',
       'hidden.field_event_supporting_content',
+      'hidden.field_show_gradient_on_image',
     )
     ->set('dependencies.module', [
       'allowed_formats',
@@ -71,6 +73,15 @@ function ubc_vpr_event_extend_install() {
         'show_summary' => 'true',
       ],
     ])
+    ->set('content.field_show_gradient_on_image', [
+      'weight' => '2',
+      'type' => 'boolean_checkbox',
+      'region' => 'content',
+      'third_party_settings' => [],
+      'settings' => [
+        'display_label' => 'true',
+      ],
+    ])
     ->set('content.field_event_image_teaser', [
       'weight' => '2',
       'type' => 'string_textfield',
@@ -91,12 +102,25 @@ function ubc_vpr_event_extend_install() {
         'placeholder' => '',
       ],
     ])
+    ->set('content.field_event_category', [
+      'weight' => '12',
+      'type' => 'options_select',
+      'region' => 'content',
+      'third_party_settings' => [],
+      'settings' => [],
+    ])
     ->set('content.field_event_theme', [
       'weight' => '13',
       'type' => 'options_select',
       'region' => 'content',
       'third_party_settings' => [],
       'settings' => [],
+    ])
+    ->save();
+  // update the field options for the address field
+  $config->getEditable('field.field.node.ubc_event.field_event_location')
+    ->set('settings.field_overrides.addressLine2', [
+      'override' => 'optional',
     ])
     ->save();
 }

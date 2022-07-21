@@ -21,8 +21,6 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: false
-_core:
-  default_config_hash: KqF35YZy9sZFHtWHikYYczll6uAJxilsfACAAO7po_w
 name: Project
 type: ubc_project
 description: 'Use <em>Project</em> to add new projects.'

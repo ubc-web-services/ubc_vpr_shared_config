@@ -11,19 +11,36 @@ function ubc_vpr_homepage_extend_install() {
   $config->getEditable('core.entity_view_display.node.homepage.default')
     ->set('hidden', [
       'field_homepage_cards' => true,
+      'field_show_gradient_on_image' => true,
   ])
   ->save();
   // set up the new fields on the form display
   $config->getEditable('core.entity_form_display.node.homepage.default')
     ->clear(
       'hidden.field_homepage_cards',
+      'hidden.field_show_gradient_on_image',
     )
     ->set('dependencies.config', [
       'field.field.node.homepage.field_homepage_cards',
     ])
+    ->set('third_party_settings.field_group.group_feature_area.children', [
+      'field_home_feature_image',
+      'field_show_gradient_on_image',
+      'field_feature_text',
+      'field_feature_link',
+    ])
+    ->set('content.field_show_gradient_on_image', [
+      'weight' => '2',
+      'type' => 'boolean_checkbox',
+      'region' => 'content',
+      'third_party_settings' => [],
+      'settings' => [
+        'display_label' => 'true',
+      ],
+    ])
     ->set('content.field_homepage_cards', [
       'type' => 'entity_reference_paragraphs',
-      'weight' => '2',
+      'weight' => '3',
       'region' => 'content',
       'settings' => [
         'title' => 'Paragraph',

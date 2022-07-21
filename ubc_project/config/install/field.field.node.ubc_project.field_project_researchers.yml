@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.field_project_researchers
     - node.type.ubc_profile
     - node.type.ubc_project
-_core:
-  default_config_hash: m6ZXvK8bCO3Geb7wgMaYi7gnRtxwyiilPeWfuIwxXQo
 id: node.ubc_project.field_project_researchers
 field_name: field_project_researchers
 entity_type: node

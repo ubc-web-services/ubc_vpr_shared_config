@@ -13,6 +13,7 @@ function ubc_vpr_announcement_extend_install() {
       'field_announcement_custom_conten' => true,
       'field_announcement_image_teaser' => true,
       'field_announcement_supporting_content' => true,
+      'field_show_gradient_on_image' => true,
     ])
     ->save();
   // update the shown fields on the featured_content display
@@ -34,6 +35,7 @@ function ubc_vpr_announcement_extend_install() {
       'hidden.field_announcement_custom_conten',
       'hidden.field_announcement_image_teaser',
       'hidden.field_announcement_supporting_content',
+      'hidden.field_show_gradient_on_image',
     )
     ->set('dependencies.module', [
       'allowed_formats',
@@ -70,6 +72,15 @@ function ubc_vpr_announcement_extend_install() {
         'placeholder' => '',
         'summary_rows' => '3',
         'show_summary' => 'true',
+      ],
+    ])
+    ->set('content.field_show_gradient_on_image', [
+      'weight' => '2',
+      'type' => 'boolean_checkbox',
+      'region' => 'content',
+      'third_party_settings' => [],
+      'settings' => [
+        'display_label' => 'true',
       ],
     ])
     ->set('content.field_announcement_custom_conten', [
