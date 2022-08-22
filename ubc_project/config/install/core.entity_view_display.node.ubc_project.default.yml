@@ -10,7 +10,6 @@ dependencies:
     - node.type.ubc_project
   module:
     - link
-    - svg_image
     - text
     - user
 id: node.ubc_project.default
@@ -23,7 +22,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_project_funders:
     type: link
@@ -35,22 +34,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 105
-    region: content
-  field_project_image:
-    type: image
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 102
+    weight: 4
     region: content
   field_project_researchers:
     type: entity_reference_label
@@ -58,7 +42,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 103
+    weight: 2
     region: content
   field_project_theme:
     type: entity_reference_label
@@ -66,11 +50,12 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 104
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_project_image: true
