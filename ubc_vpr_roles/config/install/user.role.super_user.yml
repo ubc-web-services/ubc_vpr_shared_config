@@ -55,13 +55,15 @@ dependencies:
     - toolbar
     - tour
     - ubc_content_items
-    - update
+    - view_unpublished
     - views_ui
     - webform
     - webform_node
+_core:
+  default_config_hash: '-oh2BIusbb2muicbMAGLZP3O6zPu42142TLvy5aOiMA'
 id: super_user
 label: 'Super User'
-weight: -6
+weight: -5
 is_admin: false
 permissions:
   - 'access administration pages'
@@ -252,6 +254,7 @@ permissions:
   - 'view all content item revisions'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any unpublished content'
   - 'view any webform submission'
   - 'view homepage revisions'
   - 'view own unpublished content'
@@ -266,7 +269,6 @@ permissions:
   - 'view ubc_profile revisions'
   - 'view unpublished content item entities'
   - 'view unpublished paragraphs'
-  - 'view update notifications'
   - 'view webform revisions'
   - 'view webform submissions any node'
   - 'view webform submissions own node'
