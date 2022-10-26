@@ -9,7 +9,7 @@ type: 'canonical_entities:node'
 pattern: 'awards/[node:title]'
 selection_criteria:
   a65db934-7000-4c58-87f6-48d728b8787b:
-    id: node_type
+    id: 'entity_bundle:node'
     negate: false
     uuid: a65db934-7000-4c58-87f6-48d728b8787b
     context_mapping:
