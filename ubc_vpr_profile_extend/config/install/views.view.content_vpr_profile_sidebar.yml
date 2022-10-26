@@ -309,7 +309,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<p class="mt-0 text-sm">{{field_profile_department_unit }}</p>'
+            text: '{{field_profile_department_unit }}'
             make_link: false
             path: ''
             absolute: false
