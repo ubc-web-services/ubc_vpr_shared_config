@@ -4,6 +4,8 @@ description: This module defines a UBC Research Project content type and its fie
 package: UBC Web Services
 dependencies:
   - ubc_profile:ubc_profile
+  - drupal:pathauto
+  - drupal:simple_sitemap
   - ubc_vpr_shared_config:ubc_vpr_shared_config
 core: '8.x'
 core_version_requirement: ^8 || ^9
