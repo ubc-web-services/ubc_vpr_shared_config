@@ -5,4 +5,5 @@ id: read_only
 label: 'Read Only'
 weight: -8
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access site in maintenance mode'
