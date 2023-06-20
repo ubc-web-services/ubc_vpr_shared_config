@@ -7,5 +7,4 @@ dependencies:
   - drupal:pathauto
   - drupal:simple_sitemap
   - ubc_vpr_shared_config:ubc_vpr_shared_config
-core: '8.x'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10

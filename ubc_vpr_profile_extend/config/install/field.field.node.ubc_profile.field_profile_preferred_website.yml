@@ -6,8 +6,6 @@ dependencies:
     - node.type.ubc_profile
   module:
     - link
-_core:
-  default_config_hash: W_jwR6LIcCtE6O3H2bgd_Vhm6OUsBrRCJojxP_QOio4
 id: node.ubc_profile.field_profile_preferred_website
 field_name: field_profile_preferred_website
 entity_type: node

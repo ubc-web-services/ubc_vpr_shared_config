@@ -57,9 +57,6 @@ function ubc_vpr_shared_config_install() {
     ->set('display.block_2.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
     ->save();
   $config->getEditable('filter.format.filtered_text')
-    ->set('filters.editor_button_link_filter.settings.button_link_style_options', '|Default Style\r\nunit-button--light|Light Button\r\nunit-button--dark|Dark Button\r\nunit-button--simple|Simple Button\r\nunit-button--outline|Outline Button\r\nunit-button--transparent|Transparent Button')
-    ->save();
-  $config->getEditable('filter.format.filtered_text')
     ->set('filters.editor_button_link_filter.settings', [
       'button_link_options' => '|No Style
 unit-button|Unit Button
@@ -398,5 +395,25 @@ function ubc_vpr_shared_config_update_9008() {
         ],
       ],
     ])
+    ->save();
+}
+
+function ubc_vpr_shared_config_update_9009() {
+  $config = \Drupal::service('config.factory');
+  // reset the already present image styles
+  $config->getEditable('image.style.hero_focal_point_2600')
+    ->set('effects.d1f781ee-20b1-4f2e-ad88-c3ef3a609877.data.height', '813')
+    ->save();
+  $config->getEditable('image.style.hero_focal_point_1300')
+    ->set('effects.3bd36d37-80c9-47bb-a4fe-863e3a1811bd.data.height', '406')
+    ->save();
+  $config->getEditable('image.style.hero_focal_point_970')
+    ->set('effects.e66684e1-b274-464f-a1d9-a9aea42d1f2d.data.height', '303')
+    ->save();
+  $config->getEditable('image.style.hero_focal_point_650')
+    ->set('effects.43c9f282-4fd9-4324-b7fd-8a4f48a42f14.data.height', '203')
+    ->save();
+  $config->getEditable('image.style.hero_focal_point_325')
+    ->set('effects.205c78b7-fd87-4be5-a494-908dd2205e7f.data.height', '102')
     ->save();
 }

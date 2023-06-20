@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 91Q1vwKVyIK5KSxc0n-MqWA0Hv4-7nd9MplB4vkXt1A
 name: 'Affiliated Institution'
 vid: profile_affiliated_institution
 description: 'Relate a profile to an institution'

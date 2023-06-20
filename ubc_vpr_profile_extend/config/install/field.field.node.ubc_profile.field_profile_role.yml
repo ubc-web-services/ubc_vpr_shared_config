@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.field_profile_role
     - node.type.ubc_profile
     - taxonomy.vocabulary.profile_role
-_core:
-  default_config_hash: IeS8yVTKhrKSIYXo_JIndxXRDDlay91spiJsdBeIEmg
 id: node.ubc_profile.field_profile_role
 field_name: field_profile_role
 entity_type: node

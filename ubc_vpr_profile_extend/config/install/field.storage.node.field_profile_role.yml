@@ -4,8 +4,6 @@ dependencies:
   module:
     - node
     - taxonomy
-_core:
-  default_config_hash: iOmRHoSUYdpdgjny8sf1B5kGCHrVi3vXa13TEgOqVKQ
 id: node.field_profile_role
 field_name: field_profile_role
 entity_type: node
