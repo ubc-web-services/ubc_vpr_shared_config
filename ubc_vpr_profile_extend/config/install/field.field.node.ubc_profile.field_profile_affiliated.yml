@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.field_profile_affiliated
     - node.type.ubc_profile
     - taxonomy.vocabulary.profile_affiliated_institution
-_core:
-  default_config_hash: FLvOGeiB4JoOspUgOZjHTIteOX_w4aX178M0Mjslzkg
 id: node.ubc_profile.field_profile_affiliated
 field_name: field_profile_affiliated
 entity_type: node

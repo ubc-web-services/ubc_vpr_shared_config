@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.field_profile_faculty
     - node.type.ubc_profile
     - taxonomy.vocabulary.profile_faculty
-_core:
-  default_config_hash: XWM5IGxbPolLCoQYy27neE_qFDp5UydK2PW5NUUld3g
 id: node.ubc_profile.field_profile_faculty
 field_name: field_profile_faculty
 entity_type: node

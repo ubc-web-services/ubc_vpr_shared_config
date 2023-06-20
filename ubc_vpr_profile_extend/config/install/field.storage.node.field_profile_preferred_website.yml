@@ -4,8 +4,6 @@ dependencies:
   module:
     - link
     - node
-_core:
-  default_config_hash: 8BaIR2nQJyF31qSWofaDDDjiQ4e2NmpaXZucPkl296w
 id: node.field_profile_preferred_website
 field_name: field_profile_preferred_website
 entity_type: node
