@@ -116,6 +116,7 @@ function ubc_vpr_page_extend_update_9002() {
   $config = \Drupal::service('config.factory');
   // update default form mode
   $config->getEditable('core.entity_form_display.node.ubc_page.default')
+    ->clear('hidden', 'field_page_custom_content_region')
     ->set('dependencies.config', [
       'field.field.node.ubc_page.body',
       'field.field.node.ubc_page.field_page_custom_content_region',
