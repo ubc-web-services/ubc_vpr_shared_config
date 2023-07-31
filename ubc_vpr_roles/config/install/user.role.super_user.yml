@@ -48,7 +48,6 @@ dependencies:
     - quick_node_clone
     - rebuild_cache_access
     - redirect
-    - role_delegation
     - scheduler
     - system
     - taxonomy
@@ -59,8 +58,6 @@ dependencies:
     - views_ui
     - webform
     - webform_node
-_core:
-  default_config_hash: '-oh2BIusbb2muicbMAGLZP3O6zPu42142TLvy5aOiMA'
 id: super_user
 label: 'Super User'
 weight: -5
@@ -103,10 +100,6 @@ permissions:
   - 'administer views'
   - 'administer webform'
   - 'administer webform submission'
-  - 'assign content_creator role'
-  - 'assign editor role'
-  - 'assign read_only role'
-  - 'assign super_user role'
   - 'clone ubc_announcement content'
   - 'clone ubc_event content'
   - 'clone ubc_landing_page content'
