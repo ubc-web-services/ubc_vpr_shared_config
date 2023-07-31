@@ -1,0 +1,32 @@
+create ubc_partner_organization content:
+  title: 'Partner Organization: Create new content'
+  description: ''
+  restrict access: TRUE
+delete any ubc_partner_organization content:
+  title: 'Partner Organization: Delete any content'
+  description: ''
+  restrict access: TRUE
+delete own ubc_partner_organization content:
+  title: 'Partner Organization: Delete own content'
+  description: 'Note that anonymous users with this permission are able to delete any content created by any anonymous user.'
+  restrict access: TRUE
+delete ubc_partner_organization revisions:
+  title: 'Partner Organization: Delete revisions'
+  description: 'To delete a revision, you also need permission to delete the content item.'
+  restrict access: TRUE
+edit any ubc_partner_organization content:
+  title: 'Partner Organization: Edit any content'
+  description: ''
+  restrict access: TRUE
+edit own ubc_partner_organization content:
+  title: 'Partner Organization: Edit own content'
+  description: 'Note that anonymous users with this permission are able to edit any content created by any anonymous user.'
+  restrict access: TRUE
+revert ubc_partner_organization revisions:
+  title: 'Partner Organization: Revert revisions'
+  description: 'To revert a revision, you also need permission to edit the content item.'
+  restrict access: TRUE
+view ubc_partner_organization revisions:
+  title: 'Partner Organization: View revisions'
+  description: 'To view a revision, you also need permission to view the content item.'
+  restrict access: TRUE

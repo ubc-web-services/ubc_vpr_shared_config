@@ -1,0 +1,32 @@
+create awards content:
+  title: 'Award: Create new content'
+  description: ''
+  restrict access: TRUE
+delete any awards content:
+  title: 'Award: Delete any content'
+  description: ''
+  restrict access: TRUE
+delete own awards content:
+  title: 'Award: Delete own content'
+  description: 'Note that anonymous users with this permission are able to delete any content created by any anonymous user.'
+  restrict access: TRUE
+delete awards revisions:
+  title: 'Award: Delete revisions'
+  description: 'To delete a revision, you also need permission to delete the content item.'
+  restrict access: TRUE
+edit any awards content:
+  title: 'Award: Edit any content'
+  description: ''
+  restrict access: TRUE
+edit own awards content:
+  title: 'Award: Edit own content'
+  description: 'Note that anonymous users with this permission are able to edit any content created by any anonymous user.'
+  restrict access: TRUE
+revert awards revisions:
+  title: 'Award: Revert revisions'
+  description: 'To revert a revision, you also need permission to edit the content item.'
+  restrict access: TRUE
+view awards revisions:
+  title: 'Award: View revisions'
+  description: 'To view a revision, you also need permission to view the content item.'
+  restrict access: TRUE
