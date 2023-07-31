@@ -3,6 +3,8 @@ type: module
 description: This module manages user roles for VPR suite of sites.
 package: UBC Web Services
 dependencies:
+  - drupal:media_bulk_upload_dropzonejs
+  - drupal:user
   - ubc_vpr_homepage_extend:ubc_vpr_homepage_extend
   - ubc_vpr_announcement_extend:ubc_vpr_announcement_extend
   - ubc_vpr_event_extend:ubc_vpr_event_extend
