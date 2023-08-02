@@ -148,7 +148,7 @@ function ubc_vpr_shared_config_uninstall() {
  * Update to add additional 1920 hero image style and adjust hero image
  * styles already set.
  */
-function ubc_vpr_shared_config_update_9001() {
+/* function ubc_vpr_shared_config_update_9001() {
   // create the new configuration (will also be enabled upon install)
   \Drupal::config('image.style.hero_focal_point_1920');
   // now write to the new configuration
@@ -203,31 +203,31 @@ function ubc_vpr_shared_config_update_9001() {
       ->set('effects.205c78b7-fd87-4be5-a494-908dd2205e7f.data.height', '102')
       ->save();
 }
-
+ */
 /**
  * Update Announcement Latest view.
  */
-function ubc_vpr_shared_config_update_9002() {
+/* function ubc_vpr_shared_config_update_9002() {
   $config = \Drupal::service('config.factory');
   $config->getEditable('views.view.content_announcements_latest')
     ->set('display.default.display_options.css_class', 'px-8 pt-2 pb-6 mt-8 border border-ubc-blue-sea')
     ->set('display.default.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
     ->set('display.block_2.display_options.header.area_text_custom.content', '<h3 class="uppercase h4 text-ubc-blue-sea">Announcements</h3>')
     ->save();
-}
+} */
 
 /**
  * Update button formats.
  * REMOVED for D10 module as button link styles no longer used
 
  */
-function ubc_vpr_shared_config_update_9004() {
-}
+/* function ubc_vpr_shared_config_update_9004() {
+} */
 
 /**
  * Update paragraph formats.
  */
-function ubc_vpr_shared_config_update_9005() {
+/* function ubc_vpr_shared_config_update_9005() {
   $config = \Drupal::service('config.factory');
   $config->getEditable('field.field.paragraph.card_group.field_paragraph_card')
     ->set('dependencies.config', [
@@ -308,18 +308,18 @@ function ubc_vpr_shared_config_update_9005() {
     ])
     ->save();
 }
-
+ */
 /**
  * Update button formats... again.
  * REMOVED for D10 module as button link styles no longer used
  */
-function ubc_vpr_shared_config_update_9006() {
-}
+/* function ubc_vpr_shared_config_update_9006() {
+} */
 
 /**
  * Update image styles.
  */
-function ubc_vpr_shared_config_update_9008() {
+/* function ubc_vpr_shared_config_update_9008() {
   $config = \Drupal::service('config.factory');
   $config->getEditable('image.style.card_focal_point_lg')
     ->set('effects', [
@@ -349,9 +349,9 @@ function ubc_vpr_shared_config_update_9008() {
       ],
     ])
     ->save();
-}
+} */
 
-function ubc_vpr_shared_config_update_9009() {
+/* function ubc_vpr_shared_config_update_9009() {
   $config = \Drupal::service('config.factory');
   // reset the already present image styles
   $config->getEditable('image.style.hero_focal_point_2600')
@@ -369,4 +369,4 @@ function ubc_vpr_shared_config_update_9009() {
   $config->getEditable('image.style.hero_focal_point_325')
     ->set('effects.205c78b7-fd87-4be5-a494-908dd2205e7f.data.height', '102')
     ->save();
-}
+} */
