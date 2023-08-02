@@ -88,7 +88,7 @@ function ubc_vpr_page_extend_uninstall() {
  /**
  * Update 9001 - add missing scheduling options.
  */
-function ubc_vpr_page_extend_update_9001() {
+/* function ubc_vpr_page_extend_update_9001() {
   $config = \Drupal::service('config.factory');
   $config->getEditable('node.type.ubc_page')
     ->set('third_party_settings.scheduler', [
@@ -107,12 +107,12 @@ function ubc_vpr_page_extend_update_9001() {
     ])
     ->save();
     return 'Page scheduling options have been updated.';
-}
+} */
 
  /**
  * Update 9002 - add custom content regions to page
  */
-function ubc_vpr_page_extend_update_9002() {
+/* function ubc_vpr_page_extend_update_9002() {
   $config = \Drupal::service('config.factory');
   // update default form mode
   $config->getEditable('core.entity_form_display.node.ubc_page.default')
@@ -700,4 +700,4 @@ function ubc_vpr_page_extend_update_9002() {
     ])
     ->save();
   return 'Page custom content regions options have been added.';
-}
+} */
