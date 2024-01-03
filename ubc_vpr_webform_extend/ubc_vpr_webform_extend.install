@@ -155,11 +155,3 @@ function ubc_vpr_webform_extend_install() {
  */
 function ubc_vpr_webform_extend_uninstall() {
 }
-
- /**
- * Update 9001 - sample update.
- */
- /*
-function ubc_vpr_webform_extend_update_9001() {
-}
-*/

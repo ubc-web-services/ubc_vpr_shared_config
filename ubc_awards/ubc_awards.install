@@ -15,11 +15,3 @@ function ubc_awards_install() {
  */
 function ubc_awards_uninstall() {
 }
-
- /**
- * Update 9001 - sample update.
- */
- /*
-function ubc_awards_update_9001() {
-}
-*/

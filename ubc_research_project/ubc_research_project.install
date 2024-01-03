@@ -15,11 +15,3 @@ function ubc_research_project_install() {
  */
 function ubc_research_project_uninstall() {
 }
-
- /**
- * Update 9001 - sample update.
- */
- /*
-function ubc_research_project_update_9001() {
-}
-*/

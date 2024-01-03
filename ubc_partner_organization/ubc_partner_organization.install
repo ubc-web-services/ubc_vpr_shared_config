@@ -16,11 +16,3 @@ function ubc_partner_organization_install() {
  */
 function ubc_partner_organization_uninstall() {
 }
-
- /**
- * Update 9001 - sample update.
- */
- /*
-function ubc_partner_organization_update_9001() {
-}
-*/
