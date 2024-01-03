@@ -62,11 +62,3 @@ function ubc_vpr_homepage_extend_install() {
  */
 function ubc_vpr_homepage_extend_uninstall() {
 }
-
- /**
- * Update 9001 - sample update.
- */
- /*
-function ubc_vpr_homepage_extend_update_9001() {
-}
-*/

@@ -16,11 +16,3 @@ function ubc_publication_install() {
  */
 function ubc_publication_uninstall() {
 }
-
- /**
- * Update 9001 - sample update.
- */
- /*
-function ubc_publication_update_9001() {
-}
-*/

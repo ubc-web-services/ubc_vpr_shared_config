@@ -8,4 +8,4 @@ dependencies:
   - drupal:simple_sitemap
   - ubc_research_project:ubc_research_project
   - ubc_vpr_shared_config:ubc_vpr_shared_config
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10

@@ -162,27 +162,3 @@ function ubc_vpr_announcement_extend_install() {
  */
 function ubc_vpr_announcement_extend_uninstall() {
 }
-
- /**
- * Update 9001 - Update to adjust teaser view mode, makes external link visible
- */
-/* function ubc_vpr_announcement_extend_update_9001() {
-  $config = \Drupal::service('config.factory');
-  $config->getEditable('core.entity_view_display.node.ubc_announcement.teaser')
-    ->set('content.field_announcement_external_link', [
-      'type' => 'link',
-      'label' => 'hidden',
-      'region' => 'content',
-      'weight' => '2',
-      'third_party_settings' => [],
-      'settings' => [
-        'trim_length' => '80',
-        'url_only' => 'false',
-        'url_plain' => 'false',
-        'rel' => '',
-        'target' => '',
-      ],
-    ])
-    ->save();
-} */
-
