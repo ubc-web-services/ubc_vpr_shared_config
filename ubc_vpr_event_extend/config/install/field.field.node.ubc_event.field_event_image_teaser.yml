@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_event_image_teaser
     - node.type.ubc_event
-_core:
-  default_config_hash: a7ny1We0egMty1uBQTCB1mqcp35IxPapVAHT8pcmY2Y
 id: node.ubc_event.field_event_image_teaser
 field_name: field_event_image_teaser
 entity_type: node

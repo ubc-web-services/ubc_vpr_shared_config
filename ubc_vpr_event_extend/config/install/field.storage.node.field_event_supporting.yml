@@ -4,8 +4,6 @@ dependencies:
   module:
     - node
     - text
-_core:
-  default_config_hash: sod-WVxTh8Ck36Y2qmoLEckwvlG6RkrJXodzzs0b7TE
 id: node.field_event_supporting
 field_name: field_event_supporting
 entity_type: node

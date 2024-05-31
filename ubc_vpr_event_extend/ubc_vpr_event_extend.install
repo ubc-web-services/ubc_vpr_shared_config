@@ -36,6 +36,7 @@ function ubc_vpr_event_extend_install() {
       'hidden.field_event_image_teaser',
       'hidden.field_event_supporting_content',
       'hidden.field_show_gradient_on_image',
+      'hidden.field_event_external_link',
     )
     ->set('dependencies.module', [
       'allowed_formats',
@@ -108,6 +109,16 @@ function ubc_vpr_event_extend_install() {
       'region' => 'content',
       'third_party_settings' => [],
       'settings' => [],
+    ])
+    ->set('content.field_event_external_link', [
+      'weight' => '23',
+      'type' => 'link_default',
+      'region' => 'content',
+      'third_party_settings' => [],
+      'settings' => [
+        'placeholder_url' => '',
+        'placeholder_title' => '',
+      ],
     ])
     ->set('content.field_event_theme', [
       'weight' => '13',

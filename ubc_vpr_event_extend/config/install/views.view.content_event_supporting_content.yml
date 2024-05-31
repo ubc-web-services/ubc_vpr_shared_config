@@ -7,8 +7,6 @@ dependencies:
   module:
     - node
     - user
-_core:
-  default_config_hash: edFpZQMU-fJGQxwPoxyFbCZih_b_fH9iojcW5doEcoU
 id: content_event_supporting_content
 label: 'Content: Event Supporting Content'
 module: views

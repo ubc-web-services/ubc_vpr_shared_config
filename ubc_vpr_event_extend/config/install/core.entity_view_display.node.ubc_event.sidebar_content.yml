@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.ubc_event.body
     - field.field.node.ubc_event.field_event_category
     - field.field.node.ubc_event.field_event_date
+    - field.field.node.ubc_event.field_event_external_link
     - field.field.node.ubc_event.field_event_image
     - field.field.node.ubc_event.field_event_image_teaser
     - field.field.node.ubc_event.field_event_is_ongoing
@@ -17,12 +18,12 @@ dependencies:
     - field.field.node.ubc_event.field_event_supporting
     - field.field.node.ubc_event.field_event_tags
     - field.field.node.ubc_event.field_event_theme
+    - field.field.node.ubc_event.field_event_vpri_unit
+    - field.field.node.ubc_event.field_show_gradient_on_image
     - node.type.ubc_event
   module:
     - text
     - user
-_core:
-  default_config_hash: W05POz16JefLMqnRg3gYuuSDdXbr-c5wcQlJ9EG8W-Q
 id: node.ubc_event.sidebar_content
 targetEntityType: node
 bundle: ubc_event
@@ -40,6 +41,7 @@ hidden:
   content_moderation_control: true
   field_event_category: true
   field_event_date: true
+  field_event_external_link: true
   field_event_image: true
   field_event_image_teaser: true
   field_event_is_ongoing: true
@@ -50,4 +52,6 @@ hidden:
   field_event_private: true
   field_event_tags: true
   field_event_theme: true
+  field_event_vpri_unit: true
+  field_show_gradient_on_image: true
   links: true

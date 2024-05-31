@@ -7,8 +7,6 @@ dependencies:
   module:
     - allowed_formats
     - text
-_core:
-  default_config_hash: 5WaIYyroWsXLvKViu4w_knLjghRy-WD1tQ3xpYrBCdU
 third_party_settings:
   allowed_formats:
     filtered_text: filtered_text
@@ -28,5 +26,6 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats: {  }
 field_type: text_long
