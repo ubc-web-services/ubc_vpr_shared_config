@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-_core:
-  default_config_hash: Sa-h2Y2H1WIyBUsvVvJLR18zXYt7QWvW4Iw6umqjTac
-name: 'Partner Location'
-vid: partner_location
-description: ''
-weight: 0

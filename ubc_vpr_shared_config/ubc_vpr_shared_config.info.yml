@@ -1,8 +1,5 @@
-name: UBC VPR Shared Config
+name: UBC VPR Shared Config (deprecated)
 type: module
-description: This module adds general shared config for the VPR suite of sites.
+description: This module has been deprecated and can be safely uninstalled.
 package: UBC Web Services
-dependencies:
-  - ubc_general_shared_config:ubc_general_shared_config
-  - ubc_paragraph_entities:ubc_paragraph_entities
-core_version_requirement: ^10
+core_version_requirement: ^10.3

@@ -3,6 +3,5 @@
   "description": "Custom UBC Drupal 10 config modules for the VPR suite of websites",
   "type": "drupal-module",
   "require": {
-    "ubc-web-services/ubc_d8_config_modules": "^6.0 || ^7.0"
   }
 }

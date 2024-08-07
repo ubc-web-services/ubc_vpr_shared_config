@@ -1,10 +1,5 @@
-name: UBC Awards Content Type
+name: UBC Awards Content Type (deprecated)
 type: module
-description: This module defines a UBC Award content type and its fields.
+description: This module has been deprecated and can be safely uninstalled.
 package: UBC Web Services
-dependencies:
-  - ubc_profile:ubc_profile
-  - drupal:pathauto
-  - drupal:simple_sitemap
-  - ubc_vpr_shared_config:ubc_vpr_shared_config
-core_version_requirement: ^10
+core_version_requirement: ^10.3
